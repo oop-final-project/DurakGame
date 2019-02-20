@@ -8,5 +8,6 @@ namespace DurakGame_ClassLib
 {
     public class Card
     {
+        //added just to get started
     }
 }
