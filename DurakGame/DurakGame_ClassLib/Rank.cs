@@ -8,8 +8,7 @@ namespace DurakGame_ClassLib
 {
        public enum Rank
         {
-            Ace = 1,
-            Deuce,
+            Deuce = 2,
             Three,
             Four,
             Five,
@@ -21,6 +20,7 @@ namespace DurakGame_ClassLib
             Jack,
             Queen,
             King,
-        }
+            Ace
+    }
     
 }

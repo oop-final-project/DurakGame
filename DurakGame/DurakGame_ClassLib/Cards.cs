@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DurakGame_ClassLib 
 {
-    class Cards : CollectionBase , ICloneable
+    public class Cards : CollectionBase , ICloneable
     {
         public void Add(Card newCard)
         {
