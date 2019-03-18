@@ -36,12 +36,14 @@ namespace DurakGame_Tester
                 Console.WriteLine(card.ToString());
             }
 
-            Hand testHand = new Hand(testDeck);
+            IPlayer cpuPlayer;
+
+            cpuPlayer = new EasyPlayer(testDeck);
 
             Cards playedCards = new Cards();
 
             playedCards.Add(new Card(Suit.Spade, Rank.Eight));
-            //playedCards.Add(new Card(Suit.Spade, Rank.Jack));
+            playedCards.Add(new Card(Suit.Spade, Rank.Jack));
 
             Console.WriteLine("");
 
@@ -52,7 +54,7 @@ namespace DurakGame_Tester
 
             Console.WriteLine("");
 
-            foreach (Card card in testHand)
+            foreach (Card card in cpuPlayer.getHand())
             {
                 if (card.isPlayable(playedCards))
                 {
@@ -62,6 +64,17 @@ namespace DurakGame_Tester
                 {
                     Console.WriteLine(card.ToString() + " is not playable");
                 }
+            }
+
+            Console.WriteLine("");
+
+            try
+            {
+                Console.WriteLine(cpuPlayer.selectCard(playedCards).ToString() + " was played!");
+            }
+            catch(OperationCanceledException e)
+            {
+                Console.WriteLine(e.Message);
             }
 
             //Console.WriteLine("");
