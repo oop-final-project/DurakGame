@@ -157,17 +157,11 @@
   <data name="KS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="playingcard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playingcard.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="QC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QC.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="QD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="QH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QH.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="QS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TableTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TableTop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

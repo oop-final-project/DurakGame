@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DurakGame_Client
+namespace DurakForms
 {
-    public partial class frmDurak : Form
+    public partial class DurakMain : Form
     {
-        public frmDurak()
+        public DurakMain()
         {
             InitializeComponent();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

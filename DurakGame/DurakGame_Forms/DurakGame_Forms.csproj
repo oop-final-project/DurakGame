@@ -46,17 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Durak.cs" />
-    <Compile Include="DurakForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DurakForm.Designer.cs">
-      <DependentUpon>DurakForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DurakForm.resx">
-      <DependentUpon>DurakForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -232,6 +222,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\8D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DurakGame_ClassLib\DurakGame_ClassLib.csproj">
+      <Project>{30e61a8d-a260-41df-9060-202615abc78e}</Project>
+      <Name>DurakGame_ClassLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DurakGame_Tester\DurakGame_Tester.csproj">
+      <Project>{490a9b09-4b1f-4c97-a199-93a85193317f}</Project>
+      <Name>DurakGame_Tester</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
