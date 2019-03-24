@@ -185,6 +185,7 @@
             this.btnAbout.Text = "&About";
             this.DurakTip.SetToolTip(this.btnAbout, "How to play DURAK game");
             this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnPlay
             // 
@@ -223,7 +224,8 @@
             this.MinimumSize = new System.Drawing.Size(596, 410);
             this.Name = "DurakMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Durak";
+            this.Text = "DURAK GAME";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.gbxDifficulty.ResumeLayout(false);
             this.gbxDifficulty.PerformLayout();
             this.gbxCardNum.ResumeLayout(false);

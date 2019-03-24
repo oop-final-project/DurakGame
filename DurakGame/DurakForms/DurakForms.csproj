@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DurakGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DurakGame.Designer.cs">
+      <DependentUpon>DurakGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="DurakMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DurakGame.resx">
+      <DependentUpon>DurakGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DurakMain.resx">
       <DependentUpon>DurakMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

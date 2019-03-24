@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DurakForms
@@ -17,9 +10,23 @@ namespace DurakForms
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles Quit button quit
+        /// </summary>
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();                   // closes the form(application)
+        }
+
+        /// <summary>
+        /// Handles About butoon click
+        /// </summary>
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            this.Hide();                            // hides the current form
+            About abou = new About();               // creates new abou form to show
+            abou.ShowDialog();                      // displays the abou form
+            
         }
     }
 }
