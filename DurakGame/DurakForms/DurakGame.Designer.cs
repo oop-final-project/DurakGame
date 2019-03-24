@@ -34,6 +34,7 @@
             this.gbxAttacker = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnQuit = new System.Windows.Forms.Button();
             this.gbxAttacker.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainMenu.Location = new System.Drawing.Point(3, 12);
             this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(117, 30);
+            this.btnMainMenu.Size = new System.Drawing.Size(117, 42);
             this.btnMainMenu.TabIndex = 1;
             this.btnMainMenu.Text = "&Main Menu";
             this.btnMainMenu.UseVisualStyleBackColor = true;
@@ -97,6 +98,19 @@
             this.panel1.Size = new System.Drawing.Size(595, 159);
             this.panel1.TabIndex = 1;
             // 
+            // btnQuit
+            // 
+            this.btnQuit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnQuit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.Location = new System.Drawing.Point(3, 60);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(117, 38);
+            this.btnQuit.TabIndex = 8;
+            this.btnQuit.Text = "&Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
             // frmDurakGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,11 +118,13 @@
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 469);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxAttacker);
             this.Controls.Add(this.btnMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDurakGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.gbxAttacker.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -123,5 +139,6 @@
         private System.Windows.Forms.GroupBox gbxAttacker;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnQuit;
     }
 }

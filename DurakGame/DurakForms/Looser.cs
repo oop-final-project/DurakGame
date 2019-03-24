@@ -1,33 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DurakForms
 {
-    public partial class frmAbout : Form
+    public partial class frrmLooser : Form
     {
-        /// <summary>
-        /// Inititalizes the form
-        /// </summary>
-        public frmAbout()
+        public frrmLooser()
         {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// To handle the main menu button click from the about page.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnMainMenu_Click(object sender, EventArgs e)
-        {   
+        private void btnPlayAgain_Click(object sender, EventArgs e)
+        {
             this.Hide();                                    // hides the about form
             DurakMain Main = new DurakMain();               // creates the form to display
             Main.ShowDialog();                              // displays the main form
+
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();               //closes the form
+            Close();                    // closes the form
+
         }
     }
 }
