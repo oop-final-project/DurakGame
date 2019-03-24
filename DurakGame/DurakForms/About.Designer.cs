@@ -1,6 +1,6 @@
 ﻿namespace DurakForms
 {
-    partial class About
+    partial class frmAbout
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
@@ -50,9 +50,10 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(735, 336);
             this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.TabStop = false;
             this.richTextBox1.Text = "";
             // 
-            // About
+            // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -62,7 +63,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "About";
+            this.Name = "frmAbout";
             this.Text = "About";
             this.ResumeLayout(false);
 

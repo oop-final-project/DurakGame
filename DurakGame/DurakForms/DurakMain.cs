@@ -15,7 +15,7 @@ namespace DurakForms
         /// </summary>
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();                   // closes the form(application)
+            Close();         // closes the form(application)
         }
 
         /// <summary>
@@ -23,10 +23,18 @@ namespace DurakForms
         /// </summary>
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            this.Hide();                            // hides the current form
-            About abou = new About();               // creates new abou form to show
+            Hide();                            // hides the current form
+            frmAbout abou = new frmAbout();               // creates new abou form to show
             abou.ShowDialog();                      // displays the abou form
             
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            this.Hide();                            // hides the current form
+            frmDurakGame game = new frmDurakGame();               // creates new abou form to show
+            game.ShowDialog();
+
         }
     }
 }

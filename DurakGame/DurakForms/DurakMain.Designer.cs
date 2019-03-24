@@ -120,7 +120,7 @@
             this.gbxCardNum.Location = new System.Drawing.Point(447, 133);
             this.gbxCardNum.Name = "gbxCardNum";
             this.gbxCardNum.Size = new System.Drawing.Size(278, 214);
-            this.gbxCardNum.TabIndex = 4;
+            this.gbxCardNum.TabIndex = 0;
             this.gbxCardNum.TabStop = false;
             this.gbxCardNum.Text = "Number Of Cards:";
             this.DurakTip.SetToolTip(this.gbxCardNum, "Choose Number of Cards to play with.");
@@ -164,6 +164,7 @@
             // btnQuit
             // 
             this.btnQuit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnQuit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.Location = new System.Drawing.Point(181, 370);
             this.btnQuit.Name = "btnQuit";
@@ -177,6 +178,7 @@
             // btnAbout
             // 
             this.btnAbout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAbout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Location = new System.Drawing.Point(366, 370);
             this.btnAbout.Name = "btnAbout";
@@ -190,6 +192,7 @@
             // btnPlay
             // 
             this.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnPlay.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.Location = new System.Drawing.Point(562, 370);
             this.btnPlay.Name = "btnPlay";
@@ -198,6 +201,7 @@
             this.btnPlay.Text = "&Play";
             this.DurakTip.SetToolTip(this.btnPlay, "Click to Play Game");
             this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // DurakTip
             // 
@@ -205,10 +209,12 @@
             // 
             // DurakMain
             // 
+            this.AcceptButton = this.btnPlay;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btnQuit;
             this.ClientSize = new System.Drawing.Size(844, 454);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnAbout);

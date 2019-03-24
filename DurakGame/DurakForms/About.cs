@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace DurakForms
 {
-    public partial class About : Form
+    public partial class frmAbout : Form
     {
         /// <summary>
         /// Inititalizes the form
         /// </summary>
-        public About()
+        public frmAbout()
         {
             InitializeComponent();
         }
