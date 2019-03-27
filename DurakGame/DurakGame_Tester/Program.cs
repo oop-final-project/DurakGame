@@ -42,8 +42,8 @@ namespace DurakGame_Tester
 
             Cards playedCards = new Cards();
 
-            playedCards.Add(new Card(Suit.Spade, Rank.Eight));
-            playedCards.Add(new Card(Suit.Spade, Rank.Jack));
+            //playedCards.Add(new Card(Suit.Spade, Rank.Eight));
+            //playedCards.Add(new Card(Suit.Spade, Rank.Jack));
 
             Console.WriteLine("");
 
