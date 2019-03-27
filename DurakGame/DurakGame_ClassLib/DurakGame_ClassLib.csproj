@@ -52,5 +52,164 @@
     <Compile Include="Rank.cs" />
     <Compile Include="Suit.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\10C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\10D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\10H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\10S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\2C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\2D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\2H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\2S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\3C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\3D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\3H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\3S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\4C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\4D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\4H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\4S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\5C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\5D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\5H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\5S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\6C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\6D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\6H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\6S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\7C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\7D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\7H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\7S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\8C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\8D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\8H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\8S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\9C.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\9D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\9H.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\9S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\AC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\aces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\AD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\AH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\AS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\JC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\JD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\JH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\JS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\KC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\KD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\KH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\KS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\playingcard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\QC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources_Old\TableTop.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

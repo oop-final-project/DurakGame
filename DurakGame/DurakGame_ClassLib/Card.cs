@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace DurakGame_ClassLib
 {
@@ -13,6 +14,19 @@ namespace DurakGame_ClassLib
       
         public readonly Rank rank;
         public readonly Suit suit;
+
+        private bool faceUp = false;
+        public bool FaceUp
+        {
+            set
+            {
+                faceUp = value;
+            }
+            get
+            {
+                return faceUp;
+            }
+        }
 
         /// <summary>
         /// Trump suit to use if useTrumps is true.
@@ -154,6 +168,30 @@ namespace DurakGame_ClassLib
             }
 
             return returnValue;
+        }
+
+        public Image GetCardImage()
+        {
+            string imageName;    //the name of the image in the resources file
+            Image cardImage;    //holds the image
+
+            //if the card is not face up
+            if (!faceUp)
+            {
+                //set the image name to "Back"
+                imageName = "Back"; //sets it to the image name foe the back of a card
+            }
+            else // else the card is fce up and ot joker
+            {
+                //set the image name to{Suit} _{Rank}
+                imageName = suit.ToString() + "_" + rank.ToString(); // enums are handy!
+
+            }
+
+            //set the image to the appropriate objcet we get from the resources file
+            cardImage = Properties.Resources.ResourceManager.GetObject(imageName) as Image;
+            // return the image
+            return cardImage;
         }
     }
 }
