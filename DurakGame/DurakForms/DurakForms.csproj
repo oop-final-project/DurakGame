@@ -52,12 +52,6 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="CardBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CardBox.designer.cs">
-      <DependentUpon>CardBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="DurakGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,9 +80,6 @@
     </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CardBox.resx">
-      <DependentUpon>CardBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DurakGame.resx">
       <DependentUpon>DurakGame.cs</DependentUpon>
