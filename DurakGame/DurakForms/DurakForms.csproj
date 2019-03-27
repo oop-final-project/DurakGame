@@ -275,5 +275,11 @@
   <ItemGroup>
     <None Include="Resources\help.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Tutorials\Tutorial8\CardBox\CardBox.csproj">
+      <Project>{1f3b78e2-a949-442c-a012-46a69f53c099}</Project>
+      <Name>CardBox</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
