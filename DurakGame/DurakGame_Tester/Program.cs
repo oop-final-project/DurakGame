@@ -36,9 +36,11 @@ namespace DurakGame_Tester
                 Console.WriteLine(card.ToString());
             }
 
-            IPlayer cpuPlayer;
+            EasyPlayer compPlayer = new EasyPlayer(testDeck);
 
-            cpuPlayer = new EasyPlayer(testDeck);
+            IComputerPlayer cpuPlayer = compPlayer;
+
+            Player testPlayer = compPlayer;
 
             Cards playedCards = new Cards();
 
@@ -54,7 +56,7 @@ namespace DurakGame_Tester
 
             Console.WriteLine("");
 
-            foreach (Card card in cpuPlayer.getHand())
+            foreach (Card card in testPlayer.GetHand())
             {
                 if (card.isPlayable(playedCards))
                 {

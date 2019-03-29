@@ -14,7 +14,7 @@ namespace DurakGame_ClassLib
         {
             for(int cards = 0; cards < HAND_SIZE; cards++)
             {
-                List.Add(drawDeck.drawCard());
+                List.Add(drawDeck.DrawCard());
             }
         }
     }

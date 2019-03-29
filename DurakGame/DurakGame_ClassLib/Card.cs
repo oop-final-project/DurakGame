@@ -33,7 +33,7 @@ namespace DurakGame_ClassLib
         /// </summary>
         public static Suit trump = Suit.Club;
 
-        private Card()
+        public Card()
         {
         }
 

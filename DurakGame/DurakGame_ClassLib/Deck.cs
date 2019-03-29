@@ -65,7 +65,7 @@ namespace DurakGame_ClassLib
         /// </summary>
         /// <param name="position"> position of the card to be drawn </param>
         /// <returns> the card drawn </returns>
-        public Card drawCard(int position = 0)
+        public Card DrawCard(int position = 0)
         {
             Card returnCard = this[position];
 
@@ -87,7 +87,7 @@ namespace DurakGame_ClassLib
 
             for (int draws = 0; draws < numberOfCards; draws++)
             {
-                shuffledDeck.Add(this.drawCard(randomNumber.Next(0, List.Count)));
+                shuffledDeck.Add(this.DrawCard(randomNumber.Next(0, List.Count)));
             }
 
             return shuffledDeck;

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace DurakGame_ClassLib
 {
-    public interface IPlayer
+    public interface IComputerPlayer
     {
         Card selectCard(Cards playedCards);
-
-        Hand getHand();
     }
 }

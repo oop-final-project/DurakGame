@@ -42,12 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CardBox.Designer.cs">
-      <DependentUpon>CardBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,11 +53,6 @@
       <Project>{30e61a8d-a260-41df-9060-202615abc78e}</Project>
       <Name>DurakGame_ClassLib</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="CardBox.resx">
-      <DependentUpon>CardBox.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

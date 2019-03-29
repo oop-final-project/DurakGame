@@ -6,26 +6,18 @@ using System.Threading.Tasks;
 
 namespace DurakGame_ClassLib
 {
-    public class EasyPlayer : IPlayer
+    public class EasyPlayer : Player, IComputerPlayer
     {
-        private Hand playerHand;
 
         public EasyPlayer(Deck cardDraws)
+            : base(cardDraws)
         {
-            playerHand = new Hand(cardDraws);
+
         }
 
         public Card selectCard(Cards playedCards)
         {
-            Cards playableCards = new Cards();
-
-            foreach(Card card in playerHand)
-            {
-                if(card.isPlayable(playedCards))
-                {
-                    playableCards.Add(card);
-                }
-            }
+            Cards playableCards = this.GetPlayableCards(playedCards);
 
             int numberOfCards = playableCards.Count;
             Random randomNumber = new Random();
@@ -40,11 +32,6 @@ namespace DurakGame_ClassLib
             playerHand.Remove(returnCard);
 
             return returnCard;
-        }
-
-        public Hand getHand()
-        {
-            return playerHand;
         }
     }
 }
