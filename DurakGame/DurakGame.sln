@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurakGame_Tester", "DurakGa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurakForms", "DurakForms\DurakForms.csproj", "{E9E9496A-23D3-4CD6-BBD5-1390843EF30E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardBox", "..\..\..\Tutorials\Tutorial8\CardBox\CardBox.csproj", "{1F3B78E2-A949-442C-A012-46A69F53C099}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardBox", "CardBox\CardBox.csproj", "{1F3B78E2-A949-442C-A012-46A69F53C099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using DurakGame_ClassLib;
 
 namespace DurakForms
 {
@@ -34,7 +35,6 @@ namespace DurakForms
             this.Hide();                            // hides the current form
             frmDurakGame game = new frmDurakGame();               // creates new abou form to show
             game.ShowDialog();
-
         }
     }
 }

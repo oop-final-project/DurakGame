@@ -50,167 +50,178 @@
     <Compile Include="IComputerPlayer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rank.cs" />
     <Compile Include="Suit.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\10C.jpg" />
+    <None Include="Resources\10C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\10D.jpg" />
+    <None Include="Resources\10D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\10H.jpg" />
+    <None Include="Resources\10H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\10S.jpg" />
+    <None Include="Resources\10S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\2C.jpg" />
+    <None Include="Resources\2C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\2D.jpg" />
+    <None Include="Resources\2D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\2H.jpg" />
+    <None Include="Resources\2H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\2S.jpg" />
+    <None Include="Resources\2S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\3C.jpg" />
+    <None Include="Resources\3C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\3D.jpg" />
+    <None Include="Resources\3D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\3H.jpg" />
+    <None Include="Resources\3H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\3S.jpg" />
+    <None Include="Resources\3S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\4C.jpg" />
+    <None Include="Resources\4C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\4D.jpg" />
+    <None Include="Resources\4D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\4H.jpg" />
+    <None Include="Resources\4H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\4S.jpg" />
+    <None Include="Resources\4S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\5C.jpg" />
+    <None Include="Resources\5C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\5D.jpg" />
+    <None Include="Resources\5D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\5H.jpg" />
+    <None Include="Resources\5H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\5S.jpg" />
+    <None Include="Resources\5S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\6C.jpg" />
+    <None Include="Resources\6C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\6D.jpg" />
+    <None Include="Resources\6D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\6H.jpg" />
+    <None Include="Resources\6H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\6S.jpg" />
+    <None Include="Resources\6S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\7C.jpg" />
+    <None Include="Resources\7C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\7D.jpg" />
+    <None Include="Resources\7D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\7H.jpg" />
+    <None Include="Resources\7H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\7S.jpg" />
+    <None Include="Resources\7S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\8C.jpg" />
+    <None Include="Resources\8C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\8D.jpg" />
+    <None Include="Resources\8D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\8H.jpg" />
+    <None Include="Resources\8H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\8S.jpg" />
+    <None Include="Resources\8S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\9C.jpg" />
+    <None Include="Resources\9C.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\9D.jpg" />
+    <None Include="Resources\9D.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\9H.jpg" />
+    <None Include="Resources\9H.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\9S.jpg" />
+    <None Include="Resources\9S.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\AC.jpg" />
+    <None Include="Resources\AC.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\aces.jpg" />
+    <None Include="Resources\aces.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\AD.jpg" />
+    <None Include="Resources\AD.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\AH.jpg" />
+    <None Include="Resources\AH.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\AS.jpg" />
+    <None Include="Resources\AS.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\help.ico" />
+    <None Include="Resources\help.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\JC.jpg" />
+    <None Include="Resources\JC.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\JD.jpg" />
+    <None Include="Resources\JD.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\JH.jpg" />
+    <None Include="Resources\JH.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\JS.jpg" />
+    <None Include="Resources\JS.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\KC.jpg" />
+    <None Include="Resources\KC.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\KD.jpg" />
+    <None Include="Resources\KD.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\KH.jpg" />
+    <None Include="Resources\KH.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\KS.jpg" />
+    <None Include="Resources\KS.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\playingcard.ico" />
+    <None Include="Resources\playingcard.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\QC.jpg" />
+    <None Include="Resources\QC.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources_Old\TableTop.jpg" />
+    <None Include="Resources\TableTop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
