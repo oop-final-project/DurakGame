@@ -32,9 +32,10 @@ namespace DurakForms
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            this.Hide();                            // hides the current form
+            this.Hide();
             frmDurakGame game = new frmDurakGame();               // creates new abou form to show
             game.ShowDialog();
+            this.Close();                            // hides the current form
         }
     }
 }
