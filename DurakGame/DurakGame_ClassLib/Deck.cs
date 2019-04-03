@@ -15,7 +15,7 @@ namespace DurakGame_ClassLib
         /// <summary>
         /// Initializes a standard deck of 52 cards
         /// </summary>
-        public Deck()
+        public Deck(bool v)
         {
             foreach (Rank rank in Enum.GetValues(typeof(Rank)))
             {
