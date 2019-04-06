@@ -30,128 +30,171 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDurakGame));
             this.btnMainMenu = new System.Windows.Forms.Button();
-            this.gbxAttacker = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxComputer = new System.Windows.Forms.GroupBox();
+            this.pnlCPU = new System.Windows.Forms.Panel();
+            this.gbxHuman = new System.Windows.Forms.GroupBox();
+            this.pnlHuman = new System.Windows.Forms.Panel();
             this.btnQuit = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gbxAttacker.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblTalonCount = new System.Windows.Forms.Label();
+            this.gbxRiver = new System.Windows.Forms.GroupBox();
+            this.pnlRiver = new System.Windows.Forms.Panel();
+            this.gbxComputer.SuspendLayout();
+            this.gbxHuman.SuspendLayout();
+            this.gbxRiver.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMainMenu
             // 
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMainMenu.Location = new System.Drawing.Point(3, 12);
+            this.btnMainMenu.Location = new System.Drawing.Point(4, 15);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(117, 42);
+            this.btnMainMenu.Size = new System.Drawing.Size(156, 52);
             this.btnMainMenu.TabIndex = 1;
             this.btnMainMenu.Text = "&Main Menu";
             this.btnMainMenu.UseVisualStyleBackColor = true;
             this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
-            // gbxAttacker
+            // gbxComputer
             // 
-            this.gbxAttacker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbxComputer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbxAttacker.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
-            this.gbxAttacker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gbxAttacker.Controls.Add(this.panel2);
-            this.gbxAttacker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbxAttacker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxAttacker.ForeColor = System.Drawing.Color.Aqua;
-            this.gbxAttacker.Location = new System.Drawing.Point(147, 12);
-            this.gbxAttacker.Name = "gbxAttacker";
-            this.gbxAttacker.Size = new System.Drawing.Size(641, 192);
-            this.gbxAttacker.TabIndex = 0;
-            this.gbxAttacker.TabStop = false;
-            this.gbxAttacker.Text = "Attacker";
+            this.gbxComputer.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
+            this.gbxComputer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gbxComputer.Controls.Add(this.pnlCPU);
+            this.gbxComputer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbxComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxComputer.ForeColor = System.Drawing.Color.Aqua;
+            this.gbxComputer.Location = new System.Drawing.Point(196, 15);
+            this.gbxComputer.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxComputer.Name = "gbxComputer";
+            this.gbxComputer.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxComputer.Size = new System.Drawing.Size(855, 177);
+            this.gbxComputer.TabIndex = 0;
+            this.gbxComputer.TabStop = false;
+            this.gbxComputer.Text = "Defender";
             // 
-            // groupBox1
+            // pnlCPU
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlCPU.Location = new System.Drawing.Point(1, 23);
+            this.pnlCPU.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlCPU.Name = "pnlCPU";
+            this.pnlCPU.Size = new System.Drawing.Size(853, 150);
+            this.pnlCPU.TabIndex = 0;
+            // 
+            // gbxHuman
+            // 
+            this.gbxHuman.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Cyan;
-            this.groupBox1.Location = new System.Drawing.Point(147, 265);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(641, 192);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Defender";
+            this.gbxHuman.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
+            this.gbxHuman.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gbxHuman.Controls.Add(this.pnlHuman);
+            this.gbxHuman.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gbxHuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxHuman.ForeColor = System.Drawing.Color.Cyan;
+            this.gbxHuman.Location = new System.Drawing.Point(196, 383);
+            this.gbxHuman.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxHuman.Name = "gbxHuman";
+            this.gbxHuman.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxHuman.Size = new System.Drawing.Size(855, 179);
+            this.gbxHuman.TabIndex = 0;
+            this.gbxHuman.TabStop = false;
+            this.gbxHuman.Text = "Attacker";
+            // 
+            // pnlHuman
+            // 
+            this.pnlHuman.Location = new System.Drawing.Point(1, 26);
+            this.pnlHuman.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlHuman.Name = "pnlHuman";
+            this.pnlHuman.Size = new System.Drawing.Size(853, 150);
+            this.pnlHuman.TabIndex = 1;
             // 
             // btnQuit
             // 
             this.btnQuit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnQuit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuit.Location = new System.Drawing.Point(3, 60);
+            this.btnQuit.Location = new System.Drawing.Point(4, 74);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(117, 38);
+            this.btnQuit.Size = new System.Drawing.Size(156, 47);
             this.btnQuit.TabIndex = 8;
             this.btnQuit.Text = "&Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // panel2
+            // lblTalonCount
             // 
-            this.panel2.Location = new System.Drawing.Point(1, 19);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(640, 173);
-            this.panel2.TabIndex = 0;
+            this.lblTalonCount.AutoSize = true;
+            this.lblTalonCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTalonCount.Location = new System.Drawing.Point(40, 184);
+            this.lblTalonCount.Name = "lblTalonCount";
+            this.lblTalonCount.Size = new System.Drawing.Size(46, 31);
+            this.lblTalonCount.TabIndex = 9;
+            this.lblTalonCount.Text = "99";
             // 
-            // panel1
+            // gbxRiver
             // 
-            this.panel1.Location = new System.Drawing.Point(1, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(640, 173);
-            this.panel1.TabIndex = 1;
+            this.gbxRiver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxRiver.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
+            this.gbxRiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gbxRiver.Controls.Add(this.pnlRiver);
+            this.gbxRiver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gbxRiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxRiver.ForeColor = System.Drawing.Color.Aqua;
+            this.gbxRiver.Location = new System.Drawing.Point(197, 198);
+            this.gbxRiver.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxRiver.Name = "gbxRiver";
+            this.gbxRiver.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxRiver.Size = new System.Drawing.Size(855, 177);
+            this.gbxRiver.TabIndex = 10;
+            this.gbxRiver.TabStop = false;
+            this.gbxRiver.Text = "River";
             // 
-            // pictureBox1
+            // pnlRiver
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 169);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pnlRiver.Location = new System.Drawing.Point(1, 23);
+            this.pnlRiver.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlRiver.Name = "pnlRiver";
+            this.pnlRiver.Size = new System.Drawing.Size(853, 150);
+            this.pnlRiver.TabIndex = 0;
             // 
             // frmDurakGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 469);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1067, 577);
+            this.Controls.Add(this.gbxRiver);
+            this.Controls.Add(this.lblTalonCount);
             this.Controls.Add(this.btnQuit);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gbxAttacker);
+            this.Controls.Add(this.gbxHuman);
+            this.Controls.Add(this.gbxComputer);
             this.Controls.Add(this.btnMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDurakGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.gbxAttacker.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbxComputer.ResumeLayout(false);
+            this.gbxHuman.ResumeLayout(false);
+            this.gbxRiver.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button btnMainMenu;
-        private System.Windows.Forms.GroupBox gbxAttacker;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxComputer;
+        private System.Windows.Forms.GroupBox gbxHuman;
         private System.Windows.Forms.Button btnQuit;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlCPU;
+        private System.Windows.Forms.Panel pnlHuman;
+        private System.Windows.Forms.Label lblTalonCount;
+        private System.Windows.Forms.GroupBox gbxRiver;
+        private System.Windows.Forms.Panel pnlRiver;
     }
 }

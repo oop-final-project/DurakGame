@@ -6,7 +6,7 @@
  * 
  * Ref : Tutorial 8
  */
- using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -64,13 +64,13 @@ namespace CardBox
             set
             {
                 //if value is different than the underlying card's FaceUp property
-                if(myCard.FaceUp != value) // then the card is flipping iver
+                if(myCard.FaceUp != value) // then the card is flipping over
                 {
                     myCard.FaceUp = value; // change the card's FaceUp property
 
                     UpdateCardImage(); // update the card image(back or front)
 
-                    //if there is an event handler for the CArdFlipped in the client program
+                    //if there is an event handler for the CardFlipped in the client program
                     if (CardFlipped != null)
                         CardFlipped(this, new EventArgs()); // call it
                 }
@@ -101,7 +101,7 @@ namespace CardBox
         /// <summary>
         /// UpdateCardImage Helper Method: Sets the Picturebox image using the underlying card and the orientation
         /// </summary>
-        private void UpdateCardImage()
+        public void UpdateCardImage()
         {
             //set tje image using the underlying card
             pbMyPictureBox.Image = myCard.GetCardImage();
@@ -154,7 +154,7 @@ namespace CardBox
         public event EventHandler CardFlipped;
 
         /// <summary>
-        /// An event thec lient program can handle when the user clicks the control
+        /// An event the client program can handle when the user clicks the control
         /// </summary>
         new public event EventHandler Click;
 
@@ -164,7 +164,7 @@ namespace CardBox
         private void pbMyPictureBox_Click(object sender, EventArgs e)
         {
 
-            if (Click != null)  // if there is a handler for clicking the control in the cklient program
+            if (Click != null)  // if there is a handler for clicking the control in the client program
                 Click(this, e); //call it
         }
 

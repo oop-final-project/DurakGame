@@ -81,7 +81,6 @@
             this.rdoHard.Name = "rdoHard";
             this.rdoHard.Size = new System.Drawing.Size(94, 35);
             this.rdoHard.TabIndex = 3;
-            this.rdoHard.TabStop = true;
             this.rdoHard.Text = "Hard";
             this.DurakTip.SetToolTip(this.rdoHard, "Easy difficulty level");
             this.rdoHard.UseVisualStyleBackColor = true;
@@ -89,6 +88,7 @@
             // rdoModerate
             // 
             this.rdoModerate.AutoSize = true;
+            this.rdoModerate.Checked = true;
             this.rdoModerate.Location = new System.Drawing.Point(46, 92);
             this.rdoModerate.Name = "rdoModerate";
             this.rdoModerate.Size = new System.Drawing.Size(149, 35);
@@ -105,7 +105,6 @@
             this.rdoEasy.Name = "rdoEasy";
             this.rdoEasy.Size = new System.Drawing.Size(96, 35);
             this.rdoEasy.TabIndex = 1;
-            this.rdoEasy.TabStop = true;
             this.rdoEasy.Text = "Easy";
             this.DurakTip.SetToolTip(this.rdoEasy, "Easy difficulty level");
             this.rdoEasy.UseVisualStyleBackColor = true;
@@ -132,7 +131,6 @@
             this.rdo52.Name = "rdo52";
             this.rdo52.Size = new System.Drawing.Size(65, 35);
             this.rdo52.TabIndex = 6;
-            this.rdo52.TabStop = true;
             this.rdo52.Text = "52";
             this.DurakTip.SetToolTip(this.rdo52, "Play with 52 cards.");
             this.rdo52.UseVisualStyleBackColor = true;
@@ -140,6 +138,7 @@
             // rdo36
             // 
             this.rdo36.AutoSize = true;
+            this.rdo36.Checked = true;
             this.rdo36.Location = new System.Drawing.Point(52, 92);
             this.rdo36.Name = "rdo36";
             this.rdo36.Size = new System.Drawing.Size(65, 35);
@@ -156,7 +155,6 @@
             this.rdo20.Name = "rdo20";
             this.rdo20.Size = new System.Drawing.Size(65, 35);
             this.rdo20.TabIndex = 4;
-            this.rdo20.TabStop = true;
             this.rdo20.Text = "20";
             this.DurakTip.SetToolTip(this.rdo20, "Play with 20 cards.");
             this.rdo20.UseVisualStyleBackColor = true;

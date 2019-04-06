@@ -32,8 +32,38 @@ namespace DurakForms
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            int cardNum;
+
+            char difficulty;
+
+            if(rdo20.Checked)
+            {
+                cardNum = 20;
+            }
+            else if(rdo36.Checked)
+            {
+                cardNum = 36;
+            }
+            else
+            {
+                cardNum = 52;
+            }
+
+            if(rdoEasy.Checked)
+            {
+                difficulty = 'e';
+            }
+            else if(rdoModerate.Checked)
+            {
+                difficulty = 'm';
+            }
+            else
+            {
+                difficulty = 'h';
+            }
+
             this.Hide();
-            frmDurakGame game = new frmDurakGame();               // creates new abou form to show
+            frmDurakGame game = new frmDurakGame(cardNum, difficulty);               // creates new abou form to show
             game.ShowDialog();
             this.Close();                            // hides the current form
         }

@@ -41,5 +41,18 @@ namespace DurakGame_ClassLib
 
             return playableCards;
         }
+
+        public void AddCardsToHand(Cards addCards)
+        {
+            foreach(Card card in addCards)
+            {
+                playerHand.Add(card);
+            }
+        }
+
+        public void DrawCard(Deck drawDeck)
+        {
+            playerHand.Add(drawDeck.DrawCard());
+        }
     }
 }

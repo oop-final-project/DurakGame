@@ -103,5 +103,10 @@ namespace DurakGame_ClassLib
             
             return this[index].suit;
         }
+
+        public Card getTrumpCard()
+        {
+            return this[this.Count - 1];
+        }
     }
 }
