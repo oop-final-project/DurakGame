@@ -37,9 +37,10 @@
             // btnMainMenu
             // 
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMainMenu.Location = new System.Drawing.Point(678, 394);
+            this.btnMainMenu.Location = new System.Drawing.Point(904, 485);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(110, 31);
+            this.btnMainMenu.Size = new System.Drawing.Size(147, 38);
             this.btnMainMenu.TabIndex = 1;
             this.btnMainMenu.Text = "&Main Menu";
             this.btnMainMenu.UseVisualStyleBackColor = true;
@@ -47,21 +48,23 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(33, 36);
+            this.richTextBox1.Location = new System.Drawing.Point(44, 44);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(735, 336);
+            this.richTextBox1.Size = new System.Drawing.Size(979, 317);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.TabStop = false;
-            this.richTextBox1.Text = "";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // btnQuit
             // 
             this.btnQuit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnQuit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuit.Location = new System.Drawing.Point(12, 387);
+            this.btnQuit.Location = new System.Drawing.Point(16, 476);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(107, 40);
+            this.btnQuit.Size = new System.Drawing.Size(143, 49);
             this.btnQuit.TabIndex = 8;
             this.btnQuit.Text = "&Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
@@ -69,15 +72,17 @@
             // 
             // frmAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.CancelButton = this.btnMainMenu;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAbout";

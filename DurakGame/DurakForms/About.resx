@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>This game has no winner - only a loser. At the start, each player is dealt six cards, which are played in a series of bouts of attack and defence. When a player's hand is reduced to fewer than six cards it is replenished from the talon of undealt cards. 
+After the talon is exhausted, there is no more replenishment and the aim is to get rid of all the cards from your hand. The last player left holding cards is the loser. This player is the fool (durak) and is ridiculed by the other players.
+
+Since the goal is to not be the last man with cards, you want to enter the last stage of the game with a decent hand of size 6 (but not much more, preferably less), and a few high trumps or better. 
+Doing that will almost guarantee you a quick exit, and let the other players battle for the durak.
+
+This means that unless your starting hand is really strong, you should strive to get new cards from the deck, keep the good cards and get rid of the bad cards.
+Since this is your goal, failing to defend has three bad consequences:
+1) you are forced to pick up bad cards (since it is unlikely that high trumps will be used to attack you early in the game)
+2) since your hand size is now more than 6, you will need to get rid of the bad cards to be able to draw more cards from the deck
+3) you lost an attacking turn, which is a good way to get rid of low cards.
+Since failing to defend is really bad in this game, you want to minimize the amount of time you spend defending, and increase the times you attack.
+
+Don't be a fool...
+
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

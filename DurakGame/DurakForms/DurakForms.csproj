@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DemoCardsLibrary">
+      <HintPath>..\..\..\..\Tutorials\Tutorial9_Done\FormUIDemo\bin\Debug\DemoCardsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MyCardBox">
+      <HintPath>..\..\..\..\Tutorials\Tutorial9_Done\FormUIDemo\bin\Debug\MyCardBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -118,10 +124,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CardBox\CardBox.csproj">
-      <Project>{1f3b78e2-a949-442c-a012-46a69f53c099}</Project>
-      <Name>CardBox</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DurakGame_ClassLib\DurakGame_ClassLib.csproj">
       <Project>{30e61a8d-a260-41df-9060-202615abc78e}</Project>
       <Name>DurakGame_ClassLib</Name>
