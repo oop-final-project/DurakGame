@@ -8,6 +8,9 @@ namespace DurakForms
 {
     public partial class frmDurakGame : Form
     {
+        //Constants
+        const int VERTICAL_DISPLACEMENT = 25;
+
         //Form Level Variables
         Player attacker;
         Player defender;
@@ -18,6 +21,9 @@ namespace DurakForms
 
         Deck talon;
         Cards river = new Cards();
+        Cards adder = new Cards();
+
+        Rank? adderRank = null;
 
         CardBox.CardBox deckBox;
 
@@ -60,10 +66,6 @@ namespace DurakForms
 
             SetDeck();
 
-            river.Add(talon.DrawCard());
-            river.Add(talon.DrawCard());
-            river.Add(talon.DrawCard());
-
             Redraw();
         }
 
@@ -87,6 +89,7 @@ namespace DurakForms
         {
             EmptyPanel(pnlHuman);
             EmptyPanel(pnlCPU);
+            EmptyPanel(pnlRiver);
 
             lblTalonCount.Text = talon.Count.ToString();
 
@@ -100,12 +103,22 @@ namespace DurakForms
             }
 
             AddCardsToPanel(humanPlayer.GetHand(), pnlHuman);
-            AddCardsToPanel(defender.GetHand(), pnlCPU);
+
+            if (cpuPlayer == defender)
+            {
+                AddCardsToPanel(defender.GetHand(), pnlCPU);
+            }
+            else
+            {
+                AddCardsToPanel(attacker.GetHand(), pnlCPU);
+            }
             AddCardsToPanel(river, pnlRiver);
 
             RealignPlayerCards(pnlHuman);
             RealignPlayerCards(pnlCPU);
             RealignRiver();
+
+            SetPlayableCards();
         }
 
         private void SetDeck()
@@ -192,31 +205,19 @@ namespace DurakForms
             // If there are any cards in the panel
             if (myCount > 0)
             {
-                bool atkCard = false;
+                bool atkCard = (myCount % 2 == 0);
                 // Determine how wide one card/control is.
                 int cardWidth = pnlRiver.Controls[0].Width;
                 // Determine where the left-hand edge of a card/control placed 
                 // in the middle of the panel should be  
-                int startPoint = (pnlRiver.Width - cardWidth) / 2;
+                int startPoint = (pnlRiver.Width - cardWidth * 2);
                 // An offset for the remaining cards
                 int offset = 0;
                 // If there are more than one cards/controls in the panel
                 if (myCount > 1)
                 {
-                    // Determine what the offset should be for each card based on the 
-                    // space available and the number of card/controls
-                    offset = (pnlRiver.Width - cardWidth - 2) / (myCount - 1);
-                    // If the offset is bigger than the card/control width, i.e. there is lots of room, 
-                    // set the offset to the card width. The cards/controls will not overlap at all.
-                    if (offset > cardWidth)
-                    {
-                        offset = cardWidth;
-                    }
+                    offset = cardWidth;
                 }
-                // Determine width of all the cards/controls 
-                int allCardsWidth = (myCount - 1) * offset + cardWidth;
-                // Set the start point to where the left-hand edge of the "first" card should be.
-                startPoint = (pnlRiver.Width - allCardsWidth) / 2;
 
                 // Aligning the cards: Note that I align them in reserve order from how they
                 // are stored in the controls collection. This is so that cards on the left 
@@ -224,27 +225,33 @@ namespace DurakForms
                 // and suit more easily.
 
                 // Align the "first" card (which is the last control in the collection)
-                pnlRiver.Controls[myCount - 1].Top = 0;
-                pnlRiver.Controls[myCount - 1].Left = startPoint;
+                if (atkCard)
+                {
+                    pnlRiver.Controls[0].Top = VERTICAL_DISPLACEMENT;
+                }
+                else
+                {
+                    pnlRiver.Controls[0].Top = 0;
+                }
+
+
+                pnlRiver.Controls[0].Left = startPoint;
 
                 // for each of the remaining controls, in reverse order.
-                for (int index = myCount - 2; index >= 0; index--)
+                for (int index = 1; index < myCount; index++)
                 {
                     if(atkCard)
                     {
                         // Align the current card
                         pnlRiver.Controls[index].Top = 0;
-                        pnlRiver.Controls[index].Left = pnlRiver.Controls[index + 1].Left + offset;
-
-                        atkCard = !atkCard;
+                        pnlRiver.Controls[index].Left = pnlRiver.Controls[index - 1].Left;
                     }
                     else
                     {
-                        pnlRiver.Controls[index].Top = 25;
-                        pnlRiver.Controls[index].Left = pnlRiver.Controls[index + 1].Left;
-
-                        atkCard = !atkCard;
+                        pnlRiver.Controls[index].Top = VERTICAL_DISPLACEMENT;
+                        pnlRiver.Controls[index].Left = pnlRiver.Controls[index - 1].Left - offset;
                     }
+                    atkCard = !atkCard;
                 }
             }
         }
@@ -268,18 +275,130 @@ namespace DurakForms
 
         public void EmptyPanel(Panel panel)
         {
-            for(int index = 0; index < panel.Controls.Count; index++)
-            {
-                panel.Controls.Remove(panel.Controls[index]);
-            }
+            panel.Controls.Clear();
         }
 
         private void AddCardsToPanel(Cards cards, Panel panel)
         {
-            foreach(Card card in cards)
+            for (int index = cards.Count - 1; index >= 0; index--)
             {
-                InsertCardIntoPanel(card, panel);
+                InsertCardIntoPanel(cards[index], panel);
             }
+        }
+
+        private void SetPlayableCards()
+        {
+            foreach(CardBox.CardBox box in pnlHuman.Controls)
+            {
+                if (adderRank == null)
+                {
+                    if (box.Card.isPlayable(river))
+                    {
+                        box.Click += Cardbox_Click;
+                    }
+                    else
+                    {
+                        box.Top = VERTICAL_DISPLACEMENT;
+                    }
+                }
+                else
+                {
+                    if(box.Card.rank == adderRank || (river.Count != 0 && box.Card.isPlayable(river)))
+                    {
+                        box.Click += Cardbox_Click;
+                    }
+                    else
+                    {
+                        box.Top = VERTICAL_DISPLACEMENT;
+                    }
+                }
+            }
+        }
+
+        private void Cardbox_Click(object sender, EventArgs e)
+        {
+            CardBox.CardBox box = sender as CardBox.CardBox;
+
+            if(attacker == humanPlayer)
+            {
+                river.Add(box.Card);
+
+                humanPlayer.GetHand().Remove(box.Card);
+
+                try
+                {
+                    Card cpuCard = cpuPlayer.selectCard(river);
+
+                    river.Add(cpuCard);
+
+                    if(river.Count == 12)
+                    {
+                        DefenceSuccess();
+                    }
+                }
+                catch(OperationCanceledException)
+                {
+                    cardAdder = humanPlayer;
+                    attacker = null;
+
+                    adder.Add(box.Card);
+
+                    adderRank = box.Card.rank;
+
+                    river.Remove(box.Card);
+                }
+            }
+            else if(defender == humanPlayer)
+            {
+
+            }
+            else if(cardAdder == humanPlayer)
+            {
+
+            }
+
+            Redraw();
+        }
+
+        private void btnEndDefence_Click(object sender, EventArgs e)
+        {
+            btnEndDefence.Visible = false;
+            btnEndAttack.Visible = true;
+        }
+
+        private void btnEndAttack_Click(object sender, EventArgs e)
+        {
+            if (humanPlayer == attacker)
+            {
+                DefenceSuccess();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void DefenceSuccess()
+        {
+            btnEndAttack.Visible = false;
+            btnEndDefence.Visible = true;
+
+            attacker.FillHand(talon);
+            defender.FillHand(talon);
+
+            attacker = defender;
+            defender = humanPlayer;
+
+            gbxHuman.Text = "Defender";
+            gbxComputer.Text = "Attacker";
+
+            river = new Cards();
+
+            Card cpuCard = cpuPlayer.selectCard(river);
+
+            river.Add(cpuCard);
+
+            Redraw();
         }
     }
 }

@@ -38,6 +38,8 @@
             this.lblTalonCount = new System.Windows.Forms.Label();
             this.gbxRiver = new System.Windows.Forms.GroupBox();
             this.pnlRiver = new System.Windows.Forms.Panel();
+            this.btnEndAttack = new System.Windows.Forms.Button();
+            this.btnEndDefence = new System.Windows.Forms.Button();
             this.gbxComputer.SuspendLayout();
             this.gbxHuman.SuspendLayout();
             this.gbxRiver.SuspendLayout();
@@ -160,6 +162,33 @@
             this.pnlRiver.Size = new System.Drawing.Size(853, 150);
             this.pnlRiver.TabIndex = 0;
             // 
+            // btnEndAttack
+            // 
+            this.btnEndAttack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEndAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEndAttack.Location = new System.Drawing.Point(4, 512);
+            this.btnEndAttack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEndAttack.Name = "btnEndAttack";
+            this.btnEndAttack.Size = new System.Drawing.Size(156, 47);
+            this.btnEndAttack.TabIndex = 11;
+            this.btnEndAttack.Text = "&End Attack";
+            this.btnEndAttack.UseVisualStyleBackColor = true;
+            this.btnEndAttack.Click += new System.EventHandler(this.btnEndAttack_Click);
+            // 
+            // btnEndDefence
+            // 
+            this.btnEndDefence.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEndDefence.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEndDefence.Location = new System.Drawing.Point(4, 512);
+            this.btnEndDefence.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEndDefence.Name = "btnEndDefence";
+            this.btnEndDefence.Size = new System.Drawing.Size(156, 47);
+            this.btnEndDefence.TabIndex = 12;
+            this.btnEndDefence.Text = "&End Defence";
+            this.btnEndDefence.UseVisualStyleBackColor = true;
+            this.btnEndDefence.Visible = false;
+            this.btnEndDefence.Click += new System.EventHandler(this.btnEndDefence_Click);
+            // 
             // frmDurakGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,6 +196,8 @@
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 577);
+            this.Controls.Add(this.btnEndDefence);
+            this.Controls.Add(this.btnEndAttack);
             this.Controls.Add(this.gbxRiver);
             this.Controls.Add(this.lblTalonCount);
             this.Controls.Add(this.btnQuit);
@@ -196,5 +227,7 @@
         private System.Windows.Forms.Label lblTalonCount;
         private System.Windows.Forms.GroupBox gbxRiver;
         private System.Windows.Forms.Panel pnlRiver;
+        private System.Windows.Forms.Button btnEndAttack;
+        private System.Windows.Forms.Button btnEndDefence;
     }
 }
