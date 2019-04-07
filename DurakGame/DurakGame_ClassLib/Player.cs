@@ -21,7 +21,7 @@ namespace DurakGame_ClassLib
 
         public void FillHand(Deck cardDraws)
         {
-            for(int cardCount = playerHand.Count; cardCount < 6; cardCount++)
+            for(int cardCount = playerHand.Count; cardCount < 6 && cardDraws.Count != 0; cardCount++)
             {
                 playerHand.Add(cardDraws.DrawCard(0));
             }

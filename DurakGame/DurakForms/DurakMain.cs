@@ -63,9 +63,9 @@ namespace DurakForms
             }
 
             this.Hide();
-            frmDurakGame game = new frmDurakGame(cardNum, difficulty);               // creates new abou form to show
+            frmDurakGame game = new frmDurakGame(cardNum, difficulty);
             game.ShowDialog();
-            this.Close();                            // hides the current form
+            this.Show();
         }
     }
 }

@@ -74,15 +74,7 @@ namespace DurakForms
         /// </summary
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DurakMain Main = new DurakMain();               // creates the form to display
-            Main.ShowDialog();                              // displays the main form
-            this.Close();                            // hides the current form
-        }
-
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.Close();                            // closes the current form
         }
 
         private void Redraw()
@@ -113,6 +105,18 @@ namespace DurakForms
                 AddCardsToPanel(attacker.GetHand(), pnlCPU);
             }
             AddCardsToPanel(river, pnlRiver);
+
+            if(adder.Count > 0)
+            {
+                EmptyPanel(pnlAdder);
+                gbxAdder.Visible = true;
+                AddCardsToPanel(adder, pnlAdder);
+                RealignPlayerCards(pnlAdder);
+            }
+            else
+            {
+                gbxAdder.Visible = false;
+            }
 
             RealignPlayerCards(pnlHuman);
             RealignPlayerCards(pnlCPU);
@@ -267,6 +271,10 @@ namespace DurakForms
             {
                 aCardBox.FaceUp = true;
             }
+            else
+            {
+                aCardBox.FaceUp = false;
+            }
             aCardBox.UpdateCardImage();
 
             // Add the new control to the appropriate panel
@@ -325,9 +333,25 @@ namespace DurakForms
 
                 humanPlayer.GetHand().Remove(box.Card);
 
+                if(humanPlayer.GetHand().Count == 0 && talon.Count == 0)
+                {
+                    this.Hide();
+                    frmWinner win = new frmWinner();
+                    win.ShowDialog();
+                    this.Close();
+                }
+
                 try
                 {
                     Card cpuCard = cpuPlayer.selectCard(river);
+
+                    if(defender.GetHand().Count == 0 && talon.Count == 0)
+                    {
+                        this.Hide();
+                        frmLoser lose = new frmLoser();
+                        lose.ShowDialog();
+                        this.Close();
+                    }
 
                     river.Add(cpuCard);
 
@@ -350,11 +374,62 @@ namespace DurakForms
             }
             else if(defender == humanPlayer)
             {
+                river.Add(box.Card);
 
+                humanPlayer.GetHand().Remove(box.Card);
+
+                if (humanPlayer.GetHand().Count == 0 && talon.Count == 0)
+                {
+                    this.Hide();
+                    frmWinner win = new frmWinner();
+                    win.ShowDialog();
+                    this.Close();
+                }
+
+                if (river.Count == 12)
+                {
+                    DefenceSuccess();
+                }
+                else
+                {
+                    try
+                    {
+                        Card cpuCard = cpuPlayer.selectCard(river);
+
+                        if (defender.GetHand().Count == 0 && talon.Count == 0)
+                        {
+                            this.Hide();
+                            frmLoser lose = new frmLoser();
+                            lose.ShowDialog();
+                            this.Close();
+                        }
+
+                        river.Add(cpuCard);
+                    }
+                    catch (OperationCanceledException)
+                    {
+                        DefenceSuccess();
+                    }
+                }
             }
             else if(cardAdder == humanPlayer)
             {
+                adder.Add(box.Card);
 
+                humanPlayer.GetHand().Remove(box.Card);
+
+                if (humanPlayer.GetHand().Count == 0 && talon.Count == 0)
+                {
+                    this.Hide();
+                    frmWinner win = new frmWinner();
+                    win.ShowDialog();
+                    this.Close();
+                }
+
+                if(river.Count / 2 + adder.Count == 6)
+                {
+                    AttackSuccess();
+                }
             }
 
             Redraw();
@@ -374,7 +449,7 @@ namespace DurakForms
             }
             else
             {
-
+                AttackSuccess();
             }
         }
 
@@ -397,6 +472,27 @@ namespace DurakForms
             Card cpuCard = cpuPlayer.selectCard(river);
 
             river.Add(cpuCard);
+
+            Redraw();
+        }
+
+        private void AttackSuccess()
+        {
+            btnEndAttack.Visible = true;
+            btnEndDefence.Visible = false;
+
+            attacker = cardAdder;
+            cardAdder = null;
+            adderRank = null;
+
+            defender.AddCardsToHand(river);
+            defender.AddCardsToHand(adder);
+
+            attacker.FillHand(talon);
+            defender.FillHand(talon);
+
+            river = new Cards();
+            adder = new Cards();
 
             Redraw();
         }

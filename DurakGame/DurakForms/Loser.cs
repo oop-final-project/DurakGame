@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DurakForms
 {
-    public partial class frrmLooser : Form
+    public partial class frmLoser : Form
     {
-        public frrmLooser()
+        public frmLoser()
         {
             InitializeComponent();
         }
