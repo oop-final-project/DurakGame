@@ -82,7 +82,7 @@
             this.rdoHard.Size = new System.Drawing.Size(76, 29);
             this.rdoHard.TabIndex = 3;
             this.rdoHard.Text = "Hard";
-            this.DurakTip.SetToolTip(this.rdoHard, "Easy difficulty level");
+            this.DurakTip.SetToolTip(this.rdoHard, "Hard difficulty level");
             this.rdoHard.UseVisualStyleBackColor = true;
             // 
             // rdoModerate
@@ -95,7 +95,7 @@
             this.rdoModerate.TabIndex = 2;
             this.rdoModerate.TabStop = true;
             this.rdoModerate.Text = "Moderate";
-            this.DurakTip.SetToolTip(this.rdoModerate, "Easy difficulty level");
+            this.DurakTip.SetToolTip(this.rdoModerate, "Moderate difficulty level");
             this.rdoModerate.UseVisualStyleBackColor = true;
             // 
             // rdoEasy
