@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWinner));
             this.lblWinner = new System.Windows.Forms.Label();
             this.btnQuit = new System.Windows.Forms.Button();
-            this.btnPlayAgain = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWinner
@@ -43,9 +42,10 @@
             this.lblWinner.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinner.ForeColor = System.Drawing.Color.Lime;
             this.lblWinner.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblWinner.Location = new System.Drawing.Point(79, 31);
+            this.lblWinner.Location = new System.Drawing.Point(131, 42);
+            this.lblWinner.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWinner.Name = "lblWinner";
-            this.lblWinner.Size = new System.Drawing.Size(442, 50);
+            this.lblWinner.Size = new System.Drawing.Size(547, 62);
             this.lblWinner.TabIndex = 0;
             this.lblWinner.Text = "You are the Winner!";
             this.lblWinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -53,37 +53,26 @@
             // btnQuit
             // 
             this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuit.Location = new System.Drawing.Point(402, 136);
+            this.btnQuit.Location = new System.Drawing.Point(310, 159);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(90, 40);
+            this.btnQuit.Size = new System.Drawing.Size(207, 49);
             this.btnQuit.TabIndex = 1;
-            this.btnQuit.Text = "&Quit";
+            this.btnQuit.Text = "&Quit To Menu";
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // btnPlayAgain
-            // 
-            this.btnPlayAgain.AutoSize = true;
-            this.btnPlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayAgain.Location = new System.Drawing.Point(88, 136);
-            this.btnPlayAgain.Name = "btnPlayAgain";
-            this.btnPlayAgain.Size = new System.Drawing.Size(124, 40);
-            this.btnPlayAgain.TabIndex = 1;
-            this.btnPlayAgain.Text = "&Play Again";
-            this.btnPlayAgain.UseVisualStyleBackColor = true;
-            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
-            // 
             // frmWinner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(608, 244);
-            this.Controls.Add(this.btnPlayAgain);
+            this.ClientSize = new System.Drawing.Size(811, 300);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblWinner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmWinner";
@@ -98,6 +87,5 @@
 
         private System.Windows.Forms.Label lblWinner;
         private System.Windows.Forms.Button btnQuit;
-        private System.Windows.Forms.Button btnPlayAgain;
     }
 }

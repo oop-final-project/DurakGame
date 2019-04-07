@@ -64,6 +64,7 @@ namespace DurakForms
 
             this.Hide();
             frmDurakGame game = new frmDurakGame(cardNum, difficulty);
+            game.Text = cardNum + " Card Game";
             game.ShowDialog();
             this.Show();
         }

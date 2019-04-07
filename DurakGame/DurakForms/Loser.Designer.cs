@@ -29,33 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoser));
-            this.btnPlayAgain = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lblLoser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnPlayAgain
-            // 
-            this.btnPlayAgain.AutoSize = true;
-            this.btnPlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayAgain.Location = new System.Drawing.Point(139, 171);
-            this.btnPlayAgain.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPlayAgain.Name = "btnPlayAgain";
-            this.btnPlayAgain.Size = new System.Drawing.Size(165, 49);
-            this.btnPlayAgain.TabIndex = 4;
-            this.btnPlayAgain.Text = "&Play Again";
-            this.btnPlayAgain.UseVisualStyleBackColor = true;
-            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
-            // 
             // btnQuit
             // 
             this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuit.Location = new System.Drawing.Point(541, 171);
+            this.btnQuit.Location = new System.Drawing.Point(270, 175);
             this.btnQuit.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(120, 49);
+            this.btnQuit.Size = new System.Drawing.Size(220, 49);
             this.btnQuit.TabIndex = 3;
-            this.btnQuit.Text = "&Quit";
+            this.btnQuit.Text = "&Quit To Menu";
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -68,7 +54,7 @@
             this.lblLoser.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoser.ForeColor = System.Drawing.Color.Red;
             this.lblLoser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblLoser.Location = new System.Drawing.Point(105, 32);
+            this.lblLoser.Location = new System.Drawing.Point(149, 41);
             this.lblLoser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLoser.Name = "lblLoser";
             this.lblLoser.Size = new System.Drawing.Size(494, 62);
@@ -83,7 +69,6 @@
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(796, 321);
-            this.Controls.Add(this.btnPlayAgain);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblLoser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -99,8 +84,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnPlayAgain;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lblLoser;
     }

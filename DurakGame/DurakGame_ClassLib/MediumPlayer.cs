@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DurakGame_ClassLib
 {
-    class MediumPlayer : Player, IComputerPlayer
+    public class MediumPlayer : Player, IComputerPlayer
     {
         public MediumPlayer(Deck cardDraws)
             : base(cardDraws)

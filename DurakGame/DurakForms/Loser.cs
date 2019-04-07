@@ -17,18 +17,9 @@ namespace DurakForms
             InitializeComponent();
         }
 
-        private void btnPlayAgain_Click(object sender, EventArgs e)
-        {
-            this.Hide();                                    // hides the about form
-            DurakMain Main = new DurakMain();               // creates the form to display
-            Main.ShowDialog();                              // displays the main form
-
-        }
-
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();                    // closes the form
-
         }
     }
 }

@@ -21,13 +21,5 @@ namespace DurakForms
         {
             Close();
         }
-
-        private void btnPlayAgain_Click(object sender, EventArgs e)
-        {
-            this.Hide();                                    // hides the about form
-            DurakMain Main = new DurakMain();               // creates the form to display
-            Main.ShowDialog();                              // displays the main form
-
-        }
     }
 }

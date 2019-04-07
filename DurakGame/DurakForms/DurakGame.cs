@@ -55,7 +55,10 @@ namespace DurakForms
             }
             else if(difficulty == 'm')
             {
-                //TODO: Code for moderate
+                MediumPlayer med = new MediumPlayer(talon);
+
+                defender = med;
+                cpuPlayer = med;
             }
             else
             {
@@ -333,43 +336,46 @@ namespace DurakForms
 
                 humanPlayer.GetHand().Remove(box.Card);
 
-                if(humanPlayer.GetHand().Count == 0 && talon.Count == 0)
+                if (humanPlayer.GetHand().Count == 0 && talon.Count == 0)
                 {
                     this.Hide();
                     frmWinner win = new frmWinner();
                     win.ShowDialog();
                     this.Close();
                 }
-
-                try
+                else
                 {
-                    Card cpuCard = cpuPlayer.selectCard(river);
 
-                    if(defender.GetHand().Count == 0 && talon.Count == 0)
+                    try
                     {
-                        this.Hide();
-                        frmLoser lose = new frmLoser();
-                        lose.ShowDialog();
-                        this.Close();
+                        Card cpuCard = cpuPlayer.selectCard(river);
+
+                        if (defender.GetHand().Count == 0 && talon.Count == 0)
+                        {
+                            this.Hide();
+                            frmLoser lose = new frmLoser();
+                            lose.ShowDialog();
+                            this.Close();
+                        }
+
+                        river.Add(cpuCard);
+
+                        if (river.Count == 12)
+                        {
+                            DefenceSuccess();
+                        }
                     }
-
-                    river.Add(cpuCard);
-
-                    if(river.Count == 12)
+                    catch (OperationCanceledException)
                     {
-                        DefenceSuccess();
+                        cardAdder = humanPlayer;
+                        attacker = null;
+
+                        adder.Add(box.Card);
+
+                        adderRank = box.Card.rank;
+
+                        river.Remove(box.Card);
                     }
-                }
-                catch(OperationCanceledException)
-                {
-                    cardAdder = humanPlayer;
-                    attacker = null;
-
-                    adder.Add(box.Card);
-
-                    adderRank = box.Card.rank;
-
-                    river.Remove(box.Card);
                 }
             }
             else if(defender == humanPlayer)
@@ -396,7 +402,7 @@ namespace DurakForms
                     {
                         Card cpuCard = cpuPlayer.selectCard(river);
 
-                        if (defender.GetHand().Count == 0 && talon.Count == 0)
+                        if (attacker.GetHand().Count == 0 && talon.Count == 0)
                         {
                             this.Hide();
                             frmLoser lose = new frmLoser();
@@ -448,28 +454,52 @@ namespace DurakForms
 
             river.Remove(addCard);
 
-            try
+            Cards playable = new Cards();
+
+            foreach (Card card in cardAdder.GetHand())
             {
-                while(river.Count / 2 + adder.Count < 6)
+                if (card.rank == adderRank || (river.Count != 0 && card.isPlayable(river)))
                 {
-                    adder.Add(cpuPlayer.selectCard(river));
+                    playable.Add(card);
                 }
             }
-            catch (OperationCanceledException) { }
+
+            while ((river.Count / 2) + adder.Count < 6 && playable.Count > 0)
+            {
+                adder.Add(playable[0]);
+
+                cardAdder.GetHand().Remove(playable[0]);
+
+                playable.Remove(playable[0]);
+
+                if (cardAdder.GetHand().Count == 0 && talon.Count == 0)
+                {
+                    this.Hide();
+                    frmLoser lose = new frmLoser();
+                    lose.ShowDialog();
+                    this.Close();
+                }
+            }
+            
 
             AttackSuccess();
 
-            Card cpuCard = cpuPlayer.selectCard(river);
-
-            if (defender.GetHand().Count == 0 && talon.Count == 0)
+            if (attacker.GetHand().Count != 0)
             {
-                this.Hide();
-                frmLoser lose = new frmLoser();
-                lose.ShowDialog();
-                this.Close();
+                Card cpuCard = cpuPlayer.selectCard(river);
+
+                if (attacker.GetHand().Count == 0 && talon.Count == 0)
+                {
+                    this.Hide();
+                    frmLoser lose = new frmLoser();
+                    lose.ShowDialog();
+                    this.Close();
+                }
+
+                river.Add(cpuCard);
             }
 
-            river.Add(cpuCard);
+            Redraw();
         }
 
         private void btnEndAttack_Click(object sender, EventArgs e)
@@ -477,6 +507,20 @@ namespace DurakForms
             if (humanPlayer == attacker)
             {
                 DefenceSuccess();
+
+                Card cpuCard = cpuPlayer.selectCard(river);
+
+                if (defender.GetHand().Count == 0 && talon.Count == 0)
+                {
+                    this.Hide();
+                    frmLoser lose = new frmLoser();
+                    lose.ShowDialog();
+                    this.Close();
+                }
+
+                river.Add(cpuCard);
+
+                Redraw();
             }
             else
             {
@@ -486,33 +530,28 @@ namespace DurakForms
 
         private void DefenceSuccess()
         {
-            btnEndAttack.Visible = false;
-            btnEndDefence.Visible = true;
+            btnEndAttack.Visible = !btnEndAttack.Visible;
+            btnEndDefence.Visible = !btnEndDefence.Visible;
 
             attacker.FillHand(talon);
             defender.FillHand(talon);
 
+            Player dummy = attacker;
             attacker = defender;
-            defender = humanPlayer;
+            defender = dummy;
 
-            gbxHuman.Text = "Defender";
-            gbxComputer.Text = "Attacker";
-
-            river = new Cards();
-
-            Card cpuCard = cpuPlayer.selectCard(river);
-
-            if (defender.GetHand().Count == 0 && talon.Count == 0)
+            if (gbxHuman.Text == "Attacker")
             {
-                this.Hide();
-                frmLoser lose = new frmLoser();
-                lose.ShowDialog();
-                this.Close();
+                gbxHuman.Text = "Defender";
+                gbxComputer.Text = "Attacker";
+            }
+            else
+            {
+                gbxHuman.Text = "Attacker";
+                gbxComputer.Text = "Defender";
             }
 
-            river.Add(cpuCard);
-
-            Redraw();
+            river = new Cards();
         }
 
         private void AttackSuccess()
