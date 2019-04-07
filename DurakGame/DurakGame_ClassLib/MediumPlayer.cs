@@ -16,7 +16,7 @@ namespace DurakGame_ClassLib
         public Card selectCard(Cards playedCards)
         {
             Cards playableCards = this.GetPlayableCards(playedCards);
-                
+
             int numberOfCards = playableCards.Count;
             Random randomNumber = new Random();
 
