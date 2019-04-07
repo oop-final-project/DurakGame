@@ -437,8 +437,39 @@ namespace DurakForms
 
         private void btnEndDefence_Click(object sender, EventArgs e)
         {
-            btnEndDefence.Visible = false;
-            btnEndAttack.Visible = true;
+            cardAdder = attacker;
+            attacker = null;
+
+            Card addCard = river[river.Count - 1];
+
+            adder.Add(addCard);
+
+            adderRank = addCard.rank;
+
+            river.Remove(addCard);
+
+            try
+            {
+                while(river.Count / 2 + adder.Count < 6)
+                {
+                    adder.Add(cpuPlayer.selectCard(river));
+                }
+            }
+            catch (OperationCanceledException) { }
+
+            AttackSuccess();
+
+            Card cpuCard = cpuPlayer.selectCard(river);
+
+            if (defender.GetHand().Count == 0 && talon.Count == 0)
+            {
+                this.Hide();
+                frmLoser lose = new frmLoser();
+                lose.ShowDialog();
+                this.Close();
+            }
+
+            river.Add(cpuCard);
         }
 
         private void btnEndAttack_Click(object sender, EventArgs e)
@@ -471,6 +502,14 @@ namespace DurakForms
 
             Card cpuCard = cpuPlayer.selectCard(river);
 
+            if (defender.GetHand().Count == 0 && talon.Count == 0)
+            {
+                this.Hide();
+                frmLoser lose = new frmLoser();
+                lose.ShowDialog();
+                this.Close();
+            }
+
             river.Add(cpuCard);
 
             Redraw();
@@ -478,9 +517,6 @@ namespace DurakForms
 
         private void AttackSuccess()
         {
-            btnEndAttack.Visible = true;
-            btnEndDefence.Visible = false;
-
             attacker = cardAdder;
             cardAdder = null;
             adderRank = null;
