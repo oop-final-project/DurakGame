@@ -65,12 +65,11 @@
             // 
             this.gbxComputer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbxComputer.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.gbxComputer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gbxComputer.Controls.Add(this.pnlCPU);
             this.gbxComputer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxComputer.ForeColor = System.Drawing.Color.Aqua;
+            this.gbxComputer.ForeColor = System.Drawing.Color.Black;
             this.gbxComputer.Location = new System.Drawing.Point(170, 12);
             this.gbxComputer.Name = "gbxComputer";
             this.gbxComputer.Size = new System.Drawing.Size(642, 144);
@@ -84,18 +83,17 @@
             this.pnlCPU.Name = "pnlCPU";
             this.pnlCPU.Size = new System.Drawing.Size(640, 122);
             this.pnlCPU.TabIndex = 0;
-            this.DurakTip.SetToolTip(this.pnlCPU, "Cards For Defender");
+            this.DurakTip.SetToolTip(this.pnlCPU, "Cards For CPU Player");
             // 
             // gbxHuman
             // 
             this.gbxHuman.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbxHuman.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.gbxHuman.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gbxHuman.Controls.Add(this.pnlHuman);
             this.gbxHuman.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbxHuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxHuman.ForeColor = System.Drawing.Color.Cyan;
+            this.gbxHuman.ForeColor = System.Drawing.Color.Black;
             this.gbxHuman.Location = new System.Drawing.Point(170, 311);
             this.gbxHuman.Name = "gbxHuman";
             this.gbxHuman.Size = new System.Drawing.Size(640, 144);
@@ -108,8 +106,8 @@
             this.pnlHuman.Location = new System.Drawing.Point(1, 21);
             this.pnlHuman.Name = "pnlHuman";
             this.pnlHuman.Size = new System.Drawing.Size(641, 122);
-            this.pnlHuman.TabIndex = 1;
-            this.DurakTip.SetToolTip(this.pnlHuman, "Cards for attcker");
+            this.pnlHuman.TabIndex = 0;
+            this.DurakTip.SetToolTip(this.pnlHuman, "Cards for Human Player");
             // 
             // lblTalonCount
             // 
@@ -119,7 +117,7 @@
             this.lblTalonCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTalonCount.Name = "lblTalonCount";
             this.lblTalonCount.Size = new System.Drawing.Size(38, 26);
-            this.lblTalonCount.TabIndex = 9;
+            this.lblTalonCount.TabIndex = 0;
             this.lblTalonCount.Text = "99";
             this.DurakTip.SetToolTip(this.lblTalonCount, "Cards left in deck");
             // 
@@ -127,16 +125,15 @@
             // 
             this.gbxRiver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbxRiver.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.gbxRiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gbxRiver.Controls.Add(this.pnlRiver);
             this.gbxRiver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxRiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxRiver.ForeColor = System.Drawing.Color.Aqua;
+            this.gbxRiver.ForeColor = System.Drawing.Color.Black;
             this.gbxRiver.Location = new System.Drawing.Point(171, 161);
             this.gbxRiver.Name = "gbxRiver";
             this.gbxRiver.Size = new System.Drawing.Size(641, 144);
-            this.gbxRiver.TabIndex = 10;
+            this.gbxRiver.TabIndex = 0;
             this.gbxRiver.TabStop = false;
             this.gbxRiver.Text = "River";
             // 
@@ -153,11 +150,12 @@
             this.btnEndAttack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEndAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEndAttack.Location = new System.Drawing.Point(3, 414);
-            this.btnEndAttack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEndAttack.Margin = new System.Windows.Forms.Padding(4);
             this.btnEndAttack.Name = "btnEndAttack";
             this.btnEndAttack.Size = new System.Drawing.Size(156, 47);
-            this.btnEndAttack.TabIndex = 11;
+            this.btnEndAttack.TabIndex = 3;
             this.btnEndAttack.Text = "&End Attack";
+            this.DurakTip.SetToolTip(this.btnEndAttack, "Click to End the attack");
             this.btnEndAttack.UseVisualStyleBackColor = true;
             this.btnEndAttack.Click += new System.EventHandler(this.btnEndAttack_Click);
             // 
@@ -165,12 +163,13 @@
             // 
             this.btnEndDefence.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEndDefence.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEndDefence.Location = new System.Drawing.Point(3, 414);
-            this.btnEndDefence.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEndDefence.Location = new System.Drawing.Point(3, 359);
+            this.btnEndDefence.Margin = new System.Windows.Forms.Padding(4);
             this.btnEndDefence.Name = "btnEndDefence";
             this.btnEndDefence.Size = new System.Drawing.Size(156, 47);
-            this.btnEndDefence.TabIndex = 12;
+            this.btnEndDefence.TabIndex = 2;
             this.btnEndDefence.Text = "&End Defence";
+            this.DurakTip.SetToolTip(this.btnEndDefence, "CLick to End Defence");
             this.btnEndDefence.UseVisualStyleBackColor = true;
             this.btnEndDefence.Visible = false;
             this.btnEndDefence.Click += new System.EventHandler(this.btnEndDefence_Click);
@@ -187,16 +186,15 @@
             // 
             this.gbxAdder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbxAdder.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.gbxAdder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gbxAdder.Controls.Add(this.pnlAdder);
             this.gbxAdder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbxAdder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxAdder.ForeColor = System.Drawing.Color.Aqua;
+            this.gbxAdder.ForeColor = System.Drawing.Color.Black;
             this.gbxAdder.Location = new System.Drawing.Point(818, 161);
             this.gbxAdder.Name = "gbxAdder";
             this.gbxAdder.Size = new System.Drawing.Size(246, 144);
-            this.gbxAdder.TabIndex = 13;
+            this.gbxAdder.TabIndex = 0;
             this.gbxAdder.TabStop = false;
             this.gbxAdder.Text = "Added Cards";
             this.gbxAdder.Visible = false;
