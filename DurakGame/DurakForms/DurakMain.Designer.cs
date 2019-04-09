@@ -56,7 +56,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.Yellow;
             this.lblTitle.Location = new System.Drawing.Point(173, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(590, 94);
+            this.lblTitle.Size = new System.Drawing.Size(476, 76);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Welcome To Durak!";
             // 
@@ -80,7 +80,7 @@
             this.rdoHard.Enabled = false;
             this.rdoHard.Location = new System.Drawing.Point(48, 144);
             this.rdoHard.Name = "rdoHard";
-            this.rdoHard.Size = new System.Drawing.Size(94, 35);
+            this.rdoHard.Size = new System.Drawing.Size(76, 29);
             this.rdoHard.TabIndex = 3;
             this.rdoHard.Text = "Hard";
             this.DurakTip.SetToolTip(this.rdoHard, "Hard difficulty level");
@@ -92,7 +92,7 @@
             this.rdoModerate.Checked = true;
             this.rdoModerate.Location = new System.Drawing.Point(46, 92);
             this.rdoModerate.Name = "rdoModerate";
-            this.rdoModerate.Size = new System.Drawing.Size(149, 35);
+            this.rdoModerate.Size = new System.Drawing.Size(121, 29);
             this.rdoModerate.TabIndex = 2;
             this.rdoModerate.TabStop = true;
             this.rdoModerate.Text = "Moderate";
@@ -104,7 +104,7 @@
             this.rdoEasy.AutoSize = true;
             this.rdoEasy.Location = new System.Drawing.Point(46, 43);
             this.rdoEasy.Name = "rdoEasy";
-            this.rdoEasy.Size = new System.Drawing.Size(96, 35);
+            this.rdoEasy.Size = new System.Drawing.Size(78, 29);
             this.rdoEasy.TabIndex = 1;
             this.rdoEasy.Text = "Easy";
             this.DurakTip.SetToolTip(this.rdoEasy, "Easy difficulty level");
@@ -120,7 +120,7 @@
             this.gbxCardNum.Location = new System.Drawing.Point(447, 133);
             this.gbxCardNum.Name = "gbxCardNum";
             this.gbxCardNum.Size = new System.Drawing.Size(278, 214);
-            this.gbxCardNum.TabIndex = 0;
+            this.gbxCardNum.TabIndex = 7;
             this.gbxCardNum.TabStop = false;
             this.gbxCardNum.Text = "Number Of Cards:";
             this.DurakTip.SetToolTip(this.gbxCardNum, "Choose Number of Cards to play with.");
@@ -130,7 +130,7 @@
             this.rdo52.AutoSize = true;
             this.rdo52.Location = new System.Drawing.Point(52, 144);
             this.rdo52.Name = "rdo52";
-            this.rdo52.Size = new System.Drawing.Size(65, 35);
+            this.rdo52.Size = new System.Drawing.Size(54, 29);
             this.rdo52.TabIndex = 6;
             this.rdo52.Text = "52";
             this.DurakTip.SetToolTip(this.rdo52, "Play with 52 cards.");
@@ -142,7 +142,7 @@
             this.rdo36.Checked = true;
             this.rdo36.Location = new System.Drawing.Point(52, 92);
             this.rdo36.Name = "rdo36";
-            this.rdo36.Size = new System.Drawing.Size(65, 35);
+            this.rdo36.Size = new System.Drawing.Size(54, 29);
             this.rdo36.TabIndex = 5;
             this.rdo36.TabStop = true;
             this.rdo36.Text = "36";
@@ -154,7 +154,7 @@
             this.rdo20.AutoSize = true;
             this.rdo20.Location = new System.Drawing.Point(52, 43);
             this.rdo20.Name = "rdo20";
-            this.rdo20.Size = new System.Drawing.Size(65, 35);
+            this.rdo20.Size = new System.Drawing.Size(54, 29);
             this.rdo20.TabIndex = 4;
             this.rdo20.Text = "20";
             this.DurakTip.SetToolTip(this.rdo20, "Play with 20 cards.");
@@ -168,7 +168,7 @@
             this.btnQuit.Location = new System.Drawing.Point(181, 370);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(107, 40);
-            this.btnQuit.TabIndex = 7;
+            this.btnQuit.TabIndex = 8;
             this.btnQuit.Text = "&Quit";
             this.DurakTip.SetToolTip(this.btnQuit, "Click To Exit Game");
             this.btnQuit.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             this.btnAbout.Location = new System.Drawing.Point(366, 370);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(107, 40);
-            this.btnAbout.TabIndex = 8;
+            this.btnAbout.TabIndex = 9;
             this.btnAbout.Text = "&About";
             this.DurakTip.SetToolTip(this.btnAbout, "How to play DURAK game");
             this.btnAbout.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@
             this.btnPlay.Location = new System.Drawing.Point(562, 370);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(107, 40);
-            this.btnPlay.TabIndex = 9;
+            this.btnPlay.TabIndex = 10;
             this.btnPlay.Text = "&Play";
             this.DurakTip.SetToolTip(this.btnPlay, "Click to Play Game");
             this.btnPlay.UseVisualStyleBackColor = true;
@@ -209,7 +209,7 @@
             // DurakMain
             // 
             this.AcceptButton = this.btnPlay;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DurakForms.Properties.Resources.TableTop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
