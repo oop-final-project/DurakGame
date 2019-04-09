@@ -120,7 +120,7 @@
   <metadata name="AboutTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="richTextBox1.Text" xml:space="preserve">
+  <data name="rtbAbout.Text" xml:space="preserve">
     <value>This game has no winner - only a loser. At the start, each player is dealt six cards, which are played in a series of bouts of attack and defence. When a player's hand is reduced to fewer than six cards it is replenished from the talon of undealt cards. 
 After the talon is exhausted, there is no more replenishment and the aim is to get rid of all the cards from your hand. The last player left holding cards is the loser. This player is the fool (durak) and is ridiculed by the other players.
 
@@ -134,9 +134,22 @@ Since this is your goal, failing to defend has three bad consequences:
 3) you lost an attacking turn, which is a good way to get rid of low cards.
 Since failing to defend is really bad in this game, you want to minimize the amount of time you spend defending, and increase the times you attack.
 
-Don't be a fool...
+In this game of Durak, you will notice three play areas; A top, bottom, and middle area. We will go over each of these:
 
-</value>
+Top:
+
+This is the location of the AI player's hand. You will notice the backs of their cards in a row here, as you are not permitted to see their hand.
+
+Middle: 
+
+This is the river, where all cards that are in play will go.
+
+Bottom:
+
+This is your hand, where cards you control will go. Raised cards are playable, while the others are not. This is dependent on the cards in the river. When attacking, all cards will be playable initially.
+
+There are several elements on the left side of the play area. First is the deck of cards that will be drawn from when necessary. In the deck is one card turned sideways revealing its face. This indicates the trump suit. 
+Above that is a number indicating the number of cards left in the deck. </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -230,7 +230,7 @@
             this.MinimumSize = new System.Drawing.Size(596, 410);
             this.Name = "DurakMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DURAK GAME";
+            this.Text = "Durak";
             this.TransparencyKey = System.Drawing.Color.Maroon;
             this.gbxDifficulty.ResumeLayout(false);
             this.gbxDifficulty.PerformLayout();
