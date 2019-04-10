@@ -26,7 +26,7 @@ namespace DurakGame_ClassLib
         /// selectCard method lets the AI determine which cards are playable and which one to select. On easy mode, this is entirely random
         /// </summary>
         /// <param name="playedCards"></param>
-        /// <returns></returns>
+        /// <returns>The AI's selected card to put into play</returns>
         public Card selectCard(Cards playedCards)
         {
             Cards playableCards = this.GetPlayableCards(playedCards);

@@ -77,6 +77,10 @@ namespace DurakGame_ClassLib
             }
         }
 
+        /// <summary>
+        /// Draw a card from the deck and add it to the player's hand
+        /// </summary>
+        /// <param name="drawDeck"></param>
         public void DrawCard(Deck drawDeck)
         {
             playerHand.Add(drawDeck.DrawCard());
