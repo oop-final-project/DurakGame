@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.rtbAbout = new System.Windows.Forms.RichTextBox();
-            this.btnQuit = new System.Windows.Forms.Button();
             this.AboutTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
@@ -62,21 +61,6 @@
             this.rtbAbout.Text = resources.GetString("rtbAbout.Text");
             this.AboutTip.SetToolTip(this.rtbAbout, "About Durak");
             // 
-            // btnQuit
-            // 
-            this.btnQuit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnQuit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuit.Location = new System.Drawing.Point(16, 476);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(143, 49);
-            this.btnQuit.TabIndex = 8;
-            this.btnQuit.Text = "&Quit";
-            this.AboutTip.SetToolTip(this.btnQuit, "click to Exit Game");
-            this.btnQuit.UseVisualStyleBackColor = true;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -85,7 +69,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnMainMenu;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.rtbAbout);
             this.Controls.Add(this.btnMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -102,7 +85,6 @@
         #endregion
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.RichTextBox rtbAbout;
-        private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.ToolTip AboutTip;
     }
 }
