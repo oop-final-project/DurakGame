@@ -39,19 +39,33 @@ namespace DurakGame_ClassLib
             {
                 throw new OperationCanceledException("No cards are playable...");
             }
+
+            // Card object holds the card that will be selected by the AI
             Card returnCard = playableCards[getLowestCard(playableCards)];
 
+            // Remove this card from the AI's hand before adding it to the river
             playerHand.Remove(returnCard);
 
             return returnCard;
         }
+
+        /// <summary>
+        /// A method to get the lowest-ranking card in the AI's hand. This is exclusive to medium difficulty and will make the AI more challenging
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns>The index of the lowest ranking card in the AI's hand</returns>
         public int getLowestCard(Cards index)
         {
+            // The index of the current card
             int cardIndex = 0;
+
+            // Loop through each card in the hand
             for (int i = 1; i < index.Count; i++)
             {
+                // If the rank of the current card is lower than the previously lowest card
                 if (index[i] < (index[cardIndex]))
                 {
+                    // Set the current card as the lowest card in the hand
                     cardIndex = i;
                 }
             }
