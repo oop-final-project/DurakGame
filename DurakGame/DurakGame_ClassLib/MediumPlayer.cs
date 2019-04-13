@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * @author: Adam Peltenburg
+ * @author: Tyler Querido
+ * @author: Purab Barot
+ * 
+ * Description: A class representing an opposing player when the medium difficulty is set
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

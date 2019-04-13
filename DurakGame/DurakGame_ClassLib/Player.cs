@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * @author: Adam Peltenburg
+ * @author: Tyler Querido
+ * @author: Purab Barot
+ * 
+ * Description: A class representing a player, human or otherwise
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
