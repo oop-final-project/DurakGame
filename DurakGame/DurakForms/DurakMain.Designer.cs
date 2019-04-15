@@ -33,7 +33,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.gbxDifficulty = new System.Windows.Forms.GroupBox();
             this.rdoHard = new System.Windows.Forms.RadioButton();
-            this.rdoModerate = new System.Windows.Forms.RadioButton();
             this.rdoEasy = new System.Windows.Forms.RadioButton();
             this.gbxCardNum = new System.Windows.Forms.GroupBox();
             this.rdo52 = new System.Windows.Forms.RadioButton();
@@ -63,7 +62,6 @@
             // gbxDifficulty
             // 
             this.gbxDifficulty.Controls.Add(this.rdoHard);
-            this.gbxDifficulty.Controls.Add(this.rdoModerate);
             this.gbxDifficulty.Controls.Add(this.rdoEasy);
             this.gbxDifficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDifficulty.Location = new System.Drawing.Point(101, 133);
@@ -77,27 +75,15 @@
             // rdoHard
             // 
             this.rdoHard.AutoSize = true;
-            this.rdoHard.Enabled = false;
-            this.rdoHard.Location = new System.Drawing.Point(48, 144);
+            this.rdoHard.Checked = true;
+            this.rdoHard.Location = new System.Drawing.Point(46, 145);
             this.rdoHard.Name = "rdoHard";
             this.rdoHard.Size = new System.Drawing.Size(94, 35);
-            this.rdoHard.TabIndex = 3;
+            this.rdoHard.TabIndex = 2;
+            this.rdoHard.TabStop = true;
             this.rdoHard.Text = "Hard";
-            this.DurakTip.SetToolTip(this.rdoHard, "Hard difficulty level");
+            this.DurakTip.SetToolTip(this.rdoHard, "Moderate difficulty level");
             this.rdoHard.UseVisualStyleBackColor = true;
-            // 
-            // rdoModerate
-            // 
-            this.rdoModerate.AutoSize = true;
-            this.rdoModerate.Checked = true;
-            this.rdoModerate.Location = new System.Drawing.Point(46, 92);
-            this.rdoModerate.Name = "rdoModerate";
-            this.rdoModerate.Size = new System.Drawing.Size(149, 35);
-            this.rdoModerate.TabIndex = 2;
-            this.rdoModerate.TabStop = true;
-            this.rdoModerate.Text = "Moderate";
-            this.DurakTip.SetToolTip(this.rdoModerate, "Moderate difficulty level");
-            this.rdoModerate.UseVisualStyleBackColor = true;
             // 
             // rdoEasy
             // 
@@ -246,7 +232,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox gbxDifficulty;
         private System.Windows.Forms.RadioButton rdoHard;
-        private System.Windows.Forms.RadioButton rdoModerate;
         private System.Windows.Forms.RadioButton rdoEasy;
         private System.Windows.Forms.GroupBox gbxCardNum;
         private System.Windows.Forms.RadioButton rdo52;

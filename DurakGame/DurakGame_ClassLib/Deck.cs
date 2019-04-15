@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
+ * 
+ * Description: A class representing a deck of cards
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +16,7 @@ namespace DurakGame_ClassLib
 {
     public class Deck : Cards
     {
-
+        //Maximum and minimum deck sizes
         const int MAX_SIZE = 52;
         const int MIN_SIZE = 0;
 
@@ -104,6 +112,10 @@ namespace DurakGame_ClassLib
             return this[index].suit;
         }
 
+        /// <summary>
+        /// Get the trump card
+        /// </summary>
+        /// <returns> The trump card </returns>
         public Card getTrumpCard()
         {
             return this[this.Count - 1];

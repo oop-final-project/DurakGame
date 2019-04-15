@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
+ * 
+ * Description: Code for the loser form
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +25,11 @@ namespace DurakForms
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the quit button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();                    // closes the form

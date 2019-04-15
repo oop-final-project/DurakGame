@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
+ * 
+ * Description: Code for the main menu form
+ */
+
+using System;
 using System.Windows.Forms;
 using DurakGame_ClassLib;
 
@@ -20,16 +28,22 @@ namespace DurakForms
         }
 
         /// <summary>
-        /// Handles About butoon click
+        /// Handles About button click
         /// </summary>
         private void btnAbout_Click(object sender, EventArgs e)
         {
             Hide();                            // hides the current form
             frmAbout abou = new frmAbout();               // creates new abou form to show
             abou.ShowDialog();                      // displays the abou form
+            Show();
             
         }
 
+        /// <summary>
+        /// Event for handling the clicking of the play button
+        /// </summary>
+        /// <param name="sender"> The button that sent the event </param>
+        /// <param name="e"> The EventArgs </param>
         private void btnPlay_Click(object sender, EventArgs e)
         {
             int cardNum;
@@ -52,10 +66,6 @@ namespace DurakForms
             if(rdoEasy.Checked)
             {
                 difficulty = 'e';
-            }
-            else if(rdoModerate.Checked)
-            {
-                difficulty = 'm';
             }
             else
             {

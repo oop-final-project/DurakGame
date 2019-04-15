@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
+ * 
+ * Ref: Tutorial 8
+ * 
+ * Description: A class representing a card
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +19,19 @@ namespace DurakGame_ClassLib
 {
     public class Card : ICloneable
     {
-        //added just to get started
 
-      
+        // The rank of the card
         public readonly Rank rank;
+
+        // The suit of the card
         public readonly Suit suit;
 
+        // Whether or not the card is face up
         private bool faceUp = false;
+
+        /// <summary>
+        /// Gets or Sets the faceUp property
+        /// </summary>
         public bool FaceUp
         {
             set
@@ -29,50 +45,94 @@ namespace DurakGame_ClassLib
         }
 
         /// <summary>
-        /// Trump suit to use if useTrumps is true.
+        /// The trump suit.
         /// </summary>
         public static Suit trump = Suit.Club;
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public Card()
         {
         }
 
+        /// <summary>
+        /// Constructor that creates a card with the given rank and suit
+        /// </summary>
+        /// <param name="newSuit"> The suit of the new card </param>
+        /// <param name="newRank"> The rank of the new card </param>
         public Card(Suit newSuit, Rank newRank)
         {
             suit = newSuit;
             rank = newRank;
         }
 
+        /// <summary>
+        /// Clones the card
+        /// </summary>
+        /// <returns> The clone of the card as an object </returns>
         public object Clone()
         {
             return MemberwiseClone();
         }
 
+        /// <summary>
+        /// Returns the card as a string
+        /// </summary>
+        /// <returns> A string that represents the card </returns>
         public override string ToString()
         {
             return "The " + rank + " of " + suit + "s";
         }
 
+        /// <summary>
+        /// Tests if two cards have an equal value
+        /// </summary>
+        /// <param name="card1"> The first card </param>
+        /// <param name="card2"> The second card </param>
+        /// <returns> Whether or not the cards are equal </returns>
         public static bool operator ==(Card card1, Card card2)
         {
             return (card1.suit == card2.suit) && (card1.rank == card2.rank);
         }
 
+        /// <summary>
+        /// Tests if two cards have a different value
+        /// </summary>
+        /// <param name="card1"> The first card </param>
+        /// <param name="card2"> The second card </param>
+        /// <returns> Whether or not the cards are different </returns>
         public static bool operator !=(Card card1, Card card2)
         {
             return !(card1 == card2);
         }
 
+        /// <summary>
+        /// Tests if two cards have an equal value
+        /// </summary>
+        /// <param name="card1"> The first card </param>
+        /// <param name="card2"> The second card </param>
+        /// <returns> Whether or not the cards are equal </returns>
         public override bool Equals(object card)
         {
             return this == (Card)card;
         }
 
+        /// <summary>
+        /// Gets the hashcode of a card
+        /// </summary>
+        /// <returns> The hashcode of a card </returns>
         public override int GetHashCode()
         {
             return 13 * (int)suit + (int)rank;
         }
 
+        /// <summary>
+        /// Tests if one card is greater than another
+        /// </summary>
+        /// <param name="card1"> The first card </param>
+        /// <param name="card2"> The second card </param>
+        /// <returns> Whether or one card is greater than the other </returns>
         public static bool operator >(Card card1, Card card2)
         {
             if (card1.suit != card2.suit)
@@ -96,11 +156,23 @@ namespace DurakGame_ClassLib
             }
         }
 
+        /// <summary>
+        /// Tests if one card is less than another
+        /// </summary>
+        /// <param name="card1"> The first card </param>
+        /// <param name="card2"> The second card </param>
+        /// <returns> Whether or one card is less than the other </returns>
         public static bool operator <(Card card1, Card card2)
         {
             return !(card1 >= card2);
         }
 
+        /// <summary>
+        /// Tests if one card is greater than or equal to another
+        /// </summary>
+        /// <param name="card1"> The first card </param>
+        /// <param name="card2"> The second card </param>
+        /// <returns> Whether or one card is greater than or equal to the other </returns>
         public static bool operator >=(Card card1, Card card2)
         {
             if (card1.suit != card2.suit)
@@ -124,6 +196,12 @@ namespace DurakGame_ClassLib
             }
         }
 
+        /// <summary>
+        /// Tests if one card is less than or equal to another
+        /// </summary>
+        /// <param name="card1"> The first card </param>
+        /// <param name="card2"> The second card </param>
+        /// <returns> Whether or one card is less than or equal to the other </returns>
         public static bool operator <=(Card card1, Card card2)
         {
             return !(card1 > card2);
@@ -170,6 +248,10 @@ namespace DurakGame_ClassLib
             return returnValue;
         }
 
+        /// <summary>
+        /// Gets the image of the card
+        /// </summary>
+        /// <returns> The image of the card </returns>
         public Image GetCardImage()
         {
             string imageName;    //the name of the image in the resources file

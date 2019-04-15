@@ -1,10 +1,11 @@
 ﻿/*
- * @author: Adam Peltenburg
- * @author: Tyler Querido
- * @author: Purab Barot
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
  * 
- * Description: A class representing an opposing player when the easy difficulty is set
- */ 
+ * Description: A class representing a computer player set to easy
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace DurakGame_ClassLib
         /// <summary>
         /// Default EasyPlayer constructor
         /// </summary>
-        /// <param name="cardDraws"></param>
+        /// <param name="cardDraws"> The deck to draw cards from </param>
         public EasyPlayer(Deck cardDraws)
             : base(cardDraws)
         {
@@ -32,8 +33,8 @@ namespace DurakGame_ClassLib
         /// <summary>
         /// selectCard method lets the AI determine which cards are playable and which one to select. On easy mode, this is entirely random
         /// </summary>
-        /// <param name="playedCards"></param>
-        /// <returns>The AI's selected card to put into play</returns>
+        /// <param name="playedCards"> The cards that have been played </param>
+        /// <returns> The card that was played </returns>
         public Card selectCard(Cards playedCards)
         {
             Cards playableCards = this.GetPlayableCards(playedCards);

@@ -1,10 +1,11 @@
 ﻿/*
- * @author: Adam Peltenburg
- * @author: Tyler Querido
- * @author: Purab Barot
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
  * 
  * Description: A class representing a player's hand
  */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,22 +14,18 @@ using System.Threading.Tasks;
 
 namespace DurakGame_ClassLib
 {
-    /// <summary>
-    /// Class for the player's hand. Inherits from Cards
-    /// </summary>
     public class Hand : Cards
     {
-        // Hand size
+        //The default size of a hand
         const int HAND_SIZE = 6;
 
         /// <summary>
-        /// Draws six cards into the player's hand
+        /// The constructor for a hand
         /// </summary>
-        /// <param name="drawDeck"></param>
+        /// <param name="drawDeck"> The deck to draw cards from </param>
         public Hand(Deck drawDeck)
         {
-            // Loop through the hand and draw a new card
-            for (int cards = 0; cards < HAND_SIZE; cards++)
+            for(int cards = 0; cards < HAND_SIZE; cards++)
             {
                 List.Add(drawDeck.DrawCard());
             }

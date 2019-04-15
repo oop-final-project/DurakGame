@@ -1,10 +1,12 @@
 ﻿/*
- * @author: Adam Peltenburg
- * @author: Tyler Querido
- * @author: Purab Barot
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
  * 
- * Description: A class representing an opposing player when the medium difficulty is set
+ * Description: A class for handling the desicions a medium
+ * difficulty player will make
  */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,15 +15,12 @@ using System.Threading.Tasks;
 
 namespace DurakGame_ClassLib
 {
-    /// <summary>
-    /// Handles the AI's medium difficulty setting, inherits from Player and IComputerPlayer
-    /// </summary>
     public class MediumPlayer : Player, IComputerPlayer
     {
         /// <summary>
-        /// Default constructor for the MediumPlayer class
+        /// The constructor for a medium player
         /// </summary>
-        /// <param name="cardDraws"></param>
+        /// <param name="cardDraws"> The deck to draw the cards from </param>
         public MediumPlayer(Deck cardDraws)
             : base(cardDraws)
         {
@@ -29,51 +28,47 @@ namespace DurakGame_ClassLib
         }
 
         /// <summary>
-        /// selectCard method lets the AI determine which cards are playable and which one to select. On medium mode, this is dictated by the rank of the card
+        /// Selects the lowest card in the player's hand
         /// </summary>
-        /// <param name="playedCards"></param>
-        /// <returns>The AI's selected card to put into play</returns>
+        /// <param name="playedCards"> The cards that have been played </param>
+        /// <returns> The card that has been played </returns>
         public Card selectCard(Cards playedCards)
         {
-            // Instantiate the playableCards class with the current playable cards
+            //Get the playable cards
             Cards playableCards = this.GetPlayableCards(playedCards);
 
-            // Number of playable cards
+            //The number of cards that are playable
             int numberOfCards = playableCards.Count;
 
-            // If there are no playable cards
+            //If no cards are playable
             if (numberOfCards == 0)
             {
+                //Cancel the operation
                 throw new OperationCanceledException("No cards are playable...");
             }
-
-            // Card object holds the card that will be selected by the AI
+            //Get the lowest card
             Card returnCard = playableCards[getLowestCard(playableCards)];
 
-            // Remove this card from the AI's hand before adding it to the river
+            //Remove the card that has been played
             playerHand.Remove(returnCard);
 
+            //return the played card
             return returnCard;
         }
 
         /// <summary>
-        /// A method to get the lowest-ranking card in the AI's hand. This is exclusive to medium difficulty and will make the AI more challenging
+        /// Gets the lowest card in the given collection
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns>The index of the lowest ranking card in the AI's hand</returns>
-        public int getLowestCard(Cards index)
+        /// <param name="cards"> The collection to find the lowest card in </param>
+        /// <returns> The indexof the lowest card </returns>
+        public int getLowestCard(Cards cards)
         {
-            // The index of the current card
             int cardIndex = 0;
-
-            // Loop through each card in the hand
-            for (int i = 1; i < index.Count; i++)
+            for (int index = 1; index < cards.Count; index++)
             {
-                // If the rank of the current card is lower than the previously lowest card
-                if (index[i] < (index[cardIndex]))
+                if (cards[index] < (cards[cardIndex]))
                 {
-                    // Set the current card as the lowest card in the hand
-                    cardIndex = i;
+                    cardIndex = index;
                 }
             }
             return cardIndex;

@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
+ * 
+ * Description: The code for the Winner form
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +25,11 @@ namespace DurakForms
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Code for handling the quit button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Close();

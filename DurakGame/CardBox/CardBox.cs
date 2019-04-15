@@ -1,8 +1,8 @@
 ﻿/**
  * 
- * Name: Purab Barot 
- * ID: 100642651
- * Date: March 15,2019
+ * Author: Purab Barot 
+ * Author: Tyler Querido
+ * Date: March 15, 2019
  * 
  * Ref : Tutorial 8
  */
@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DurakGame_ClassLib;
 //using Tutorial8;
+
 
 namespace CardBox
 {

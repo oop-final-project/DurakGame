@@ -31,7 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.btnMainMenu = new System.Windows.Forms.Button();
+
             this.rtbAbout = new System.Windows.Forms.RichTextBox();
+
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+
             this.AboutTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
@@ -39,10 +43,17 @@
             // 
             this.btnMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.btnMainMenu.Location = new System.Drawing.Point(904, 476);
             this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(147, 49);
+
+            this.btnMainMenu.Location = new System.Drawing.Point(465, 489);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(147, 38);
+
             this.btnMainMenu.TabIndex = 1;
             this.btnMainMenu.Text = "&Main Menu";
             this.AboutTip.SetToolTip(this.btnMainMenu, "Click to go back to main menu");
@@ -51,6 +62,7 @@
             // 
             // rtbAbout
             // 
+
             this.rtbAbout.Location = new System.Drawing.Point(44, 44);
             this.rtbAbout.Margin = new System.Windows.Forms.Padding(4);
             this.rtbAbout.Name = "rtbAbout";
@@ -60,6 +72,16 @@
             this.rtbAbout.TabStop = false;
             this.rtbAbout.Text = resources.GetString("rtbAbout.Text");
             this.AboutTip.SetToolTip(this.rtbAbout, "About Durak");
+
+            this.richTextBox1.Location = new System.Drawing.Point(44, 44);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(979, 317);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.TabStop = false;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.AboutTip.SetToolTip(this.richTextBox1, "About DURAK");
+
             // 
             // frmAbout
             // 
@@ -69,10 +91,17 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnMainMenu;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+
             this.Controls.Add(this.rtbAbout);
             this.Controls.Add(this.btnMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.btnMainMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAbout";
@@ -84,7 +113,11 @@
 
         #endregion
         private System.Windows.Forms.Button btnMainMenu;
+
         private System.Windows.Forms.RichTextBox rtbAbout;
+
+        private System.Windows.Forms.RichTextBox richTextBox1;
+
         private System.Windows.Forms.ToolTip AboutTip;
     }
 }

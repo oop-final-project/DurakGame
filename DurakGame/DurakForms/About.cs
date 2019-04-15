@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
+ * 
+ * Description: The code for the about page
+ */
+
+using System;
 using System.Windows.Forms;
 
 namespace DurakForms
@@ -19,15 +27,8 @@ namespace DurakForms
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnMainMenu_Click(object sender, EventArgs e)
-        {   
-            this.Hide();                                    // hides the about form
-            DurakMain Main = new DurakMain();               // creates the form to display
-            Main.ShowDialog();                              // displays the main form
-        }
-
-        private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();               //closes the form
+            this.Close();
         }
     }
 }

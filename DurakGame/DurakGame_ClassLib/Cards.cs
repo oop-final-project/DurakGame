@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Adam Peltenburg 
+ * Author: Purab Barot
+ * Author: Tyler Querido
+ * 
+ * Description: A collection class representing multiple cards
+ */
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +17,29 @@ namespace DurakGame_ClassLib
 {
     public class Cards : CollectionBase , ICloneable
     {
+        /// <summary>
+        /// Add a card to the collection
+        /// </summary>
+        /// <param name="newCard"> The card to be added </param>
         public void Add(Card newCard)
         {
             List.Add(newCard);
         }
 
+        /// <summary>
+        /// Remove a card from the collection
+        /// </summary>
+        /// <param name="oldCard"> The card to be removed </param>
         public void Remove(Card oldCard)
         {
             List.Remove(oldCard);
         }
 
+        /// <summary>
+        /// Gets or Sets a card at the given index
+        /// </summary>
+        /// <param name="cardIndex"> The index of the card </param>
+        /// <returns> The card at the index </returns>
         public Card this[int cardIndex]
         {
             get
@@ -54,6 +75,10 @@ namespace DurakGame_ClassLib
             return InnerList.Contains(card);
         }
 
+        /// <summary>
+        /// Clones the cards collection
+        /// </summary>
+        /// <returns> The clone as an object </returns>
         public object Clone()
         {
             Cards newCards = new Cards();
